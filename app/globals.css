@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cinematic Dark Palette */
+    --primary: 200 15% 12%;
+    --primary-foreground: 40 20% 95%;
+    
+    /* Primary CTA Color #EE7722 */
+    --brand: 25 85% 53%;
+    --brand-foreground: 0 0% 100%;
+    
+    /* Neutral Tones */
+    --background: 200 15% 8%;
+    --foreground: 40 20% 95%;
+    
+    --card: 200 12% 10%;
+    --card-foreground: 40 20% 95%;
+    
+    --popover: 200 15% 10%;
+    --popover-foreground: 40 20% 95%;
+    
+    --secondary: 200 10% 15%;
+    --secondary-foreground: 40 20% 95%;
+    
+    --muted: 200 10% 20%;
+    --muted-foreground: 40 10% 60%;
+    
+    --accent: 200 10% 18%;
+    --accent-foreground: 40 20% 95%;
+    
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 200 10% 22%;
+    --input: 200 10% 22%;
+    --ring: 35 85% 60%;
+    
+    --radius: 0rem;
+    
+    /* Cinematic Design Tokens */
+    --shadow-cinematic: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+    --shadow-depth: 0 20px 60px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 40px rgba(214, 158, 46, 0.3);
+    --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .font-sans {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .shadow-cinematic {
+    box-shadow: var(--shadow-cinematic);
+  }
+
+  .shadow-depth {
+    box-shadow: var(--shadow-depth);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--brand));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--brand) / 0.8);
+}
+
+/* Parallax and layering effects */
+.parallax-layer {
+  will-change: transform;
+}
+
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  z-index: 9999;
+}
+
