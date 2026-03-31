@@ -8,96 +8,66 @@ import heroImage from "@/assets/hero-resort.jpg";
 export default function Events() {
   const venues = [
     {
-      name: "Grand Ballroom",
+      name: "Conference Hall",
       area: "5,000 sq ft",
+      description: "The Conference Hall, with a seating capacity of up to 150 guests, is ideal for corporate meetings, seminars, training sessions, and mid-scale events. Its adaptable layout provides a professional environment, prioritizing both comfort and productivity.",
       capacities: {
         theatre: 500,
         banquet: 350,
         cocktail: 600,
       },
       features: [
-        "Full AV Equipment",
-        "Professional Stage",
-        "Natural Daylight",
-        "Climate Control",
-        "Elegant Chandeliers",
+        "Capacity: Up to 150 guests",
+        "Perfect for meetings, conferences, and seminars",
+        "Flexible seating arrangements",
+        "Dedicated service support", 
       ],
       ideal: "Weddings, Conferences, Large Events",
       image: heroImage,
       icon: Building,
-    },
+    }, 
+
+
     {
-      name: "Executive Conference Hall",
-      area: "2,000 sq ft",
+      name: "Mini Conference Hall",
+      area: "5,000 sq ft",
+      description: "Designed for smaller gatherings, the Mini Conference Hall accommodates up to 75 guests. It’s the perfect choice for intimate meetings, workshops, and private business discussions, offering a focused and efficient space for your corporate needs.",
       capacities: {
-        theatre: 150,
-        boardroom: 50,
-        classroom: 80,
+        theatre: 500,
+        banquet: 350,
+        cocktail: 600,
       },
       features: [
-        "Video Conferencing",
-        "High-Speed Internet",
-        "Projector & Screen",
-        "Whiteboard",
-        "Conference Phones",
+        "Capacity: Up to 75 guests",
+        "Ideal for small meetings and workshops",
+        "Organized and functional layout",
+        "Personalized service support", 
       ],
-      ideal: "Corporate Meetings, Seminars, Training",
+      ideal: "Weddings, Conferences, Large Events",
       image: heroImage,
-      icon: Monitor,
-    },
+      icon: Building,
+    }, 
+
     {
-      name: "Garden Lawn",
-      area: "8,000 sq ft",
+      name: "Open Wedding & Event Space",
+      area: "5,000 sq ft",
+      description: "Our expansive open-air venue offers the perfect setting for grand events, with a capacity to host up to 1,000 guests. Whether it’s a wedding, reception, or large social gathering, this space provides flexibility for customized décor, stage setups, and catering arrangements.",
       capacities: {
-        cocktail: 400,
-        banquet: 200,
+        theatre: 500,
+        banquet: 350,
+        cocktail: 600,
       },
       features: [
-        "Open-Air Setting",
-        "Gazebo Structure",
-        "Evening Lighting",
-        "Tropical Landscaping",
-        "Mountain Backdrop",
+        "Capacity: Up to 1,000 guests",
+        "Perfect for weddings, receptions, and large events",
+        "Spacious and flexible layout",
+        "Ideal for customized themes and setups", 
       ],
-      ideal: "Outdoor Weddings, Garden Parties",
+      ideal: "Weddings, Conferences, Large Events",
       image: heroImage,
-      icon: Sun,
-    },
-    {
-      name: "Rooftop Terrace",
-      area: "3,000 sq ft",
-      capacities: {
-        cocktail: 200,
-        banquet: 120,
-      },
-      features: [
-        "Panoramic Views",
-        "Retractable Canopy",
-        "Bar Setup",
-        "Ambient Lighting",
-        "DJ Console",
-      ],
-      ideal: "Cocktail Parties, Reception, Social Events",
-      image: heroImage,
-      icon: Users,
-    },
-    {
-      name: "Private Board Room",
-      area: "800 sq ft",
-      capacities: {
-        boardroom: 20,
-      },
-      features: [
-        "Executive Setting",
-        "Smart Board",
-        "High-Speed Internet",
-        "Video Conferencing",
-        "Privacy",
-      ],
-      ideal: "Executive Meetings, Board Sessions",
-      image: heroImage,
-      icon: Monitor,
-    },
+      icon: Building,
+    }, 
+    
   ];
 
   const services = [
@@ -115,13 +85,17 @@ export default function Events() {
       <section className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-4 animate-fade-in-up">
-            Events & Celebrations
+          Meetings & Events – The Sanihara
           </h1>
           <p className="text-xl md:text-2xl opacity-90 animate-fade-in">
-            Create unforgettable moments in stunning venues
+          At The Sanihara, we offer versatile event spaces designed to host corporate functions, social
+              gatherings, and grand celebrations with efficiency and elegance. Our venues are equipped with
+              professional service, flexible seating options, and essential event infrastructure, ensuring a flawless
+              experience every time.
           </p>
         </div>
       </section>
+ 
 
       {/* Venues */}
       <section className="py-20 bg-background">
@@ -135,7 +109,7 @@ export default function Events() {
                   className="bg-card rounded-2xl shadow-card hover:shadow-hover transition-all duration-300 overflow-hidden"
                 >
                   <div className="grid lg:grid-cols-2 gap-8">
-                    <div className="relative h-80 lg:h-auto">
+                    <div className={`relative h-80 lg:h-auto ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                       <Image
                         src={venue.image}
                         alt={venue.name}
@@ -143,7 +117,7 @@ export default function Events() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="p-8 space-y-6">
+                    <div className={`p-8 space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                       <div className="flex items-start space-x-4">
                         <div className="w-16 h-16 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0">
                           <Icon className="h-8 w-8 text-brand" />
@@ -155,7 +129,8 @@ export default function Events() {
                       </div>
 
                       <div>
-                        <h3 className="font-semibold mb-3">Capacity Configurations</h3>
+                        <h3 className="font-bold tracking-wider mb-3 text-xl uppercase">Capacity Configurations</h3>
+                        <p className="text-muted-foreground pb-10">{venue.description}</p>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                           {Object.entries(venue.capacities).map(([type, capacity]) => (
                             <div key={type} className="bg-secondary/50 rounded-lg p-3 text-center">

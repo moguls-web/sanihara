@@ -1,62 +1,41 @@
 "use client";
 
-import { Clock, Users, Utensils } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import diningImage from "@/assets/dining-restaurant.jpg";
 
 export default function Dining() {
-  const restaurants = [
+  const diningSections = [
     {
-      name: "Sofy's Multi-Cuisine",
-      description: "Fine dining experience featuring Continental and Indian delicacies in an elegant setting",
-      cuisine: "Continental & Indian",
-      seating: 50,
-      timing: "7:00 PM - 11:00 PM",
-      image: diningImage,
-      specialties: ["Malabar Fish Curry", "Tenderloin Steak", "Wood-Fired Pizza"],
-      dietaryOptions: ["Vegetarian", "Vegan", "Gluten-Free"],
+      heading: "Sofy’s Restaurant – The Sanihara",
+      paragraphs: [
+        "Sofy’s Restaurant is The Sanihara’s signature all-day dining destination, offering a refined and diverse culinary experience. Whether you’re a resident guest or a discerning walk-in diner, Sofy’s seamlessly blends global flavors with local authenticity in an elegant setting.",
+        "The restaurant boasts 60 indoor seats, providing a versatile dining environment perfect for families, corporate guests, and group travelers. Additionally, a spacious outdoor area accommodates 30 more guests, offering a relaxed atmosphere for intimate gatherings and curated dining experiences.",
+        "Our menu features a curated selection of Indian, Continental, and international cuisines, with a strong focus on North Indian specialties. Each dish is crafted using authentic recipes, premium ingredients, and traditional cooking techniques, ensuring a memorable dining experience with every bite.",
+        "Sofy’s Restaurant is the perfect choice for a wholesome breakfast, business lunch, or a leisurely dinner, where attentive service and a commitment to excellence come together to offer an unforgettable dining experience.",
+      ],
+      highlights: [
+        "A diverse menu with a focus on North Indian cuisine",
+        "60 indoor dining covers",
+        "Additional outdoor seating for 30 guests",
+        "Ideal for families, corporate gatherings, and groups",
+        "Emphasis on quality, hygiene, and guest satisfaction",
+      ],
     },
     {
-      name: "All-Day Café",
-      description: "Casual multi-cuisine dining with a relaxed ambiance, perfect for any time of day",
-      cuisine: "Multi-Cuisine",
-      seating: 80,
-      timing: "7:00 AM - 11:00 PM",
-      image: diningImage,
-      specialties: ["Breakfast Buffet", "Club Sandwiches", "Kerala Thali"],
-      dietaryOptions: ["Vegetarian", "Jain"],
-    },
-    {
-      name: "Rooftop Lounge",
-      description: "Evening cocktails and grills with breathtaking panoramic mountain views",
-      cuisine: "Bar & Grill",
-      seating: 60,
-      timing: "6:00 PM - 1:00 AM",
-      image: diningImage,
-      specialties: ["Signature Cocktails", "BBQ Platter", "Live Music Weekends"],
-      dietaryOptions: ["Vegetarian"],
-    },
-    {
-      name: "Poolside Café",
-      description: "Light bites and refreshing beverages in a relaxed outdoor setting",
-      cuisine: "Light Bites & Beverages",
-      seating: 40,
-      timing: "10:00 AM - 7:00 PM",
-      image: diningImage,
-      specialties: ["Fresh Juices", "Grilled Sandwiches", "Ice Cream"],
-      dietaryOptions: ["Vegetarian", "Vegan"],
-    },
-    {
-      name: "In-Room Dining",
-      description: "24-hour service with full menu available in the comfort of your suite or villa",
-      cuisine: "All Cuisines",
-      seating: 0,
-      timing: "24/7",
-      image: diningImage,
-      specialties: ["Breakfast in Bed", "Private Dining", "Custom Menus"],
-      dietaryOptions: ["All Available"],
+      heading: "In-Room Dining – The Sanihara",
+      paragraphs: [
+        "Enjoy a premium dining experience in the comfort and privacy of your room with our In-Room Dining service. Whether you're unwinding after a long day or starting your morning in peace, our service ensures the finest hospitality right at your doorstep.",
+        "Our curated menu includes a selection of Indian, Continental, and international dishes, including our signature North Indian specialties. Just like Sofy’s Restaurant, every meal is freshly prepared with premium ingredients to ensure consistency and quality.",
+        "Available throughout the day, our In-Room Dining service offers everything from hearty breakfasts and light snacks to complete meals, all delivered promptly with personalized attention.",
+        "In-Room Dining at The Sanihara brings a restaurant-quality experience to the tranquility of your room, combining luxury, comfort, and culinary excellence.",
+      ],
+      highlights: [
+        "A curated multi-cuisine menu available in-room",
+        "Signature North Indian dishes",
+        "Freshly prepared meals with a focus on quality and hygiene",
+        "Prompt, efficient, and discreet service",
+        "Ideal for privacy, convenience, and comfort",
+      ],
     },
   ];
 
@@ -77,89 +56,36 @@ export default function Dining() {
       {/* Restaurants */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="space-y-16">
-            {restaurants.map((restaurant, index) => (
-              <div
-                key={index}
-                className={`flex flex-col ${
-                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                } gap-8 items-center`}
-              >
-                <div className="lg:w-1/2">
-                  <div className="relative h-96 rounded-2xl overflow-hidden shadow-hover group">
-                    <Image
-                      src={restaurant.image}
-                      alt={restaurant.name}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
+          <div className="space-y-32 ">
+            {diningSections.map((section, index) => (
+              <div key={section.heading} className="grid lg:grid-cols-2 gap-8 items-start">
+                <div
+                  className={`relative min-h-[750px] rounded-2xl overflow-hidden shadow-hover group ${
+                    index % 2 === 1 ? "lg:order-2" : ""
+                  }`}
+                >
+                  <Image
+                    src={diningImage}
+                    alt={section.heading}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
-                <div className="lg:w-1/2 space-y-6">
-                  <div>
-                    <h2 className="text-4xl font-serif font-bold mb-3">{restaurant.name}</h2>
-                    <p className="text-lg text-muted-foreground">{restaurant.description}</p>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0">
-                        <Utensils className="h-6 w-6 text-brand" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">Cuisine</p>
-                        <p className="font-semibold">{restaurant.cuisine}</p>
-                      </div>
-                    </div>
-
-                    {restaurant.seating > 0 && (
-                      <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0">
-                          <Users className="h-6 w-6 text-brand" />
-                        </div>
-                        <div>
-                          <p className="text-sm text-muted-foreground">Seating</p>
-                          <p className="font-semibold">{restaurant.seating} Seats</p>
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="flex items-center space-x-3 sm:col-span-2">
-                      <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0">
-                        <Clock className="h-6 w-6 text-brand" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">Timings</p>
-                        <p className="font-semibold">{restaurant.timing}</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold mb-3">Specialties</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {restaurant.specialties.map((specialty, i) => (
-                        <Badge key={i} variant="secondary" className="px-3 py-1">
-                          {specialty}
-                        </Badge>
+                <div className={`space-y-5 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <h2 className="text-4xl font-serif font-bold">{section.heading}</h2>
+                  {section.paragraphs.map((paragraph) => (
+                    <p key={paragraph} className="text-lg text-muted-foreground">
+                      {paragraph}
+                    </p>
+                  ))}
+                  <div className="pt-1">
+                    <h3 className="text-xl font-semibold mb-3">Key Highlights:</h3>
+                    <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+                      {section.highlights.map((highlight) => (
+                        <li key={highlight}>{highlight}</li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
-
-                  <div>
-                    <h4 className="font-semibold mb-3">Dietary Options</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {restaurant.dietaryOptions.map((option, i) => (
-                        <Badge key={i} className="bg-brand/10 text-brand px-3 py-1">
-                          {option}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  <Button variant="brand" size="lg">
-                    Reserve Table
-                  </Button>
                 </div>
               </div>
             ))}

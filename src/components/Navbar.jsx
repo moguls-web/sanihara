@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Suites", path: "/suites" },
+    { name: "Rooms", path: "/rooms" },
     { name: "Dining", path: "/dining" },
     { name: "Events", path: "/events" },
     { name: "Facilities", path: "/facilities" },
@@ -48,8 +48,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <LocationSelector />
+          <div className="hidden lg:flex items-center space-x-6">            
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -63,7 +62,7 @@ const Navbar = () => {
               >
                 {link.name}
               </Link>
-            ))}
+            ))} 
           </div>
 
           {/* CTA Button */}

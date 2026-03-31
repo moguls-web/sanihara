@@ -7,93 +7,123 @@ import poolImage from "@/assets/pool-infinity.jpg";
 export default function Facilities() {
   const facilities = [
     {
-      icon: Waves,
-      name: "Swimming Pool",
-      description: "Olympic-size heated infinity pool with stunning mountain views",
-      details: ["Heated Water", "Poolside Bar", "Loungers & Cabanas", "Pool Towels"],
-      hours: "6:00 AM - 10:00 PM",
-      charge: "Complimentary for Guests",
+      icon: Sparkles,
+      name: "Recreation & Wellness – The Sanihara",
+      description:
+        "At The Sanihara, we offer a thoughtfully curated selection of recreational and wellness facilities, ensuring a well-balanced stay that combines relaxation, fitness, and leisure for guests of all ages.",
+      details: ["Curated Leisure Facilities", "Wellness Experiences", "Family-Friendly Spaces", "Balanced Stay"],
+      hours: "All Day",
+      charge: "Included for Guests",
       image: poolImage,
     },
     {
       icon: Sparkles,
-      name: "Spa & Wellness",
-      description: "Rejuvenate with traditional Ayurvedic treatments and modern therapies",
-      details: ["Ayurvedic Massage", "Steam & Sauna", "Yoga Studio", "Meditation Garden"],
+      name: "Ayurveda Treatment & Wellness Center",
+      description:
+        "Indulge in holistic rejuvenation with traditional Ayurvedic therapies designed to restore balance and enhance well-being. Our wellness center provides a variety of treatments performed by trained professionals in a serene and therapeutic environment.",
+      details: ["Traditional Ayurvedic Therapies", "Professional Therapists", "Holistic Rejuvenation", "Serene Ambience"],
       hours: "9:00 AM - 9:00 PM",
       charge: "Charges Apply",
       image: poolImage,
     },
     {
+      icon: Waves,
+      name: "Swimming Pool",
+      description:
+        "Our pristine swimming pool offers the perfect space to relax and unwind. Whether you’re looking to refresh or simply enjoy some leisure time, this tranquil setting is ideal for all guests.",
+      details: ["Pristine Pool Area", "Leisure & Relaxation", "Guest-Friendly Setting", "Family Enjoyment"],
+      hours: "6:00 AM - 10:00 PM",
+      charge: "Complimentary",
+      image: poolImage,
+    },
+    {
       icon: Dumbbell,
-      name: "Fitness Centre",
-      description: "State-of-the-art equipment and personal training services",
-      details: ["Modern Equipment", "Personal Trainer", "Yoga Classes", "Cardio Zone"],
-      hours: "24/7",
+      name: "Gymnasium",
+      description:
+        "Stay on track with your fitness routine in our fully equipped gymnasium. Designed to accommodate a wide range of workouts, it provides a comfortable and functional space for all your fitness needs.",
+      details: ["Fully Equipped Gym", "Workout Flexibility", "Functional Fitness Space", "Comfortable Environment"],
+      hours: "6:00 AM - 10:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
     {
       icon: Baby,
-      name: "Kids Play Area",
-      description: "Safe and supervised play zone for children aged 3-12 years",
-      details: ["Indoor Games", "Outdoor Playground", "Kids Pool", "Supervised Activity"],
+      name: "Children’s Playground",
+      description:
+        "Our dedicated outdoor play area offers younger guests a safe and engaging space to enjoy recreational activities, making it the perfect spot for families to spend time together.",
+      details: ["Safe Outdoor Play Area", "Family-Friendly Zone", "Engaging Activities", "Ideal for Kids"],
       hours: "8:00 AM - 8:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
     {
       icon: Briefcase,
-      name: "Business Centre",
-      description: "Fully-equipped workspace with high-speed internet and printing",
-      details: ["Workstations", "Printing Services", "Meeting Rooms", "Video Conferencing"],
-      hours: "24/7",
+      name: "Indoor Recreational Center",
+      description:
+        "Enjoy a variety of indoor games such as table tennis, carrom, chess, and Ludo. This space is designed for relaxation and friendly competition, perfect for families and groups.",
+      details: ["Table Tennis", "Carrom & Chess", "Ludo", "Family & Group Fun"],
+      hours: "9:00 AM - 9:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
     {
       icon: Car,
-      name: "Parking & Valet",
-      description: "Spacious parking with complimentary valet service",
-      details: ["100+ Spaces", "Valet Service", "Self-Parking", "EV Charging"],
-      hours: "24/7",
+      name: "Outdoor Games Area",
+      description:
+        "Our expansive outdoor sports area offers plenty of space for group activities, including basketball, football, cricket, and badminton, ensuring fun and active experiences for all.",
+      details: ["Basketball & Football", "Cricket & Badminton", "Group Activities", "Active Experiences"],
+      hours: "6:00 AM - 7:00 PM",
+      charge: "Complimentary",
+      image: poolImage,
+    },
+    {
+      icon: Heart,
+      name: "Jogging Track",
+      description:
+        "Our well-defined jogging track provides a peaceful environment for your morning or evening walks, surrounded by the natural beauty of our property.",
+      details: ["Dedicated Track", "Morning & Evening Use", "Nature-Facing Route", "Relaxing Ambience"],
+      hours: "6:00 AM - 8:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
     {
       icon: Wifi,
-      name: "Free WiFi",
-      description: "High-speed internet access throughout the property",
-      details: ["All Areas", "Unlimited", "High Speed", "Secure Connection"],
-      hours: "24/7",
+      name: "Bicycling",
+      description:
+        "Explore the scenic surroundings of The Sanihara with our bicycling facilities, offering a refreshing and active way to experience the property.",
+      details: ["Scenic Cycling Routes", "Active Exploration", "Leisure Riding", "Guest-Friendly Access"],
+      hours: "6:00 AM - 6:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
     {
       icon: Coffee,
-      name: "24/7 Room Service",
-      description: "Round-the-clock in-room dining and concierge services",
-      details: ["Full Menu", "Quick Service", "Special Requests", "Concierge"],
-      hours: "24/7",
-      charge: "Menu Prices",
+      name: "Campfire with Music",
+      description:
+        "As the evening sets in, enjoy a curated campfire experience, complete with music, creating the perfect atmosphere for a relaxed and memorable social gathering.",
+      details: ["Curated Campfire Setup", "Music Experience", "Evening Social Ambience", "Memorable Gatherings"],
+      hours: "Evenings",
+      charge: "Charges Apply",
       image: poolImage,
     },
     {
       icon: Heart,
-      name: "Concierge Services",
-      description: "Personalized assistance for all your needs during your stay",
-      details: ["Tour Booking", "Transportation", "Restaurant Reservations", "Special Arrangements"],
-      hours: "24/7",
-      charge: "Complimentary",
+      name: "Candlelight Dinner",
+      description:
+        "For special occasions or intimate celebrations, indulge in a customized candlelight dinner that promises an unforgettable and private dining experience.",
+      details: ["Customized Setup", "Private Dining Experience", "Ideal for Celebrations", "Romantic Ambience"],
+      hours: "On Request",
+      charge: "Charges Apply",
       image: poolImage,
     },
     {
       icon: Plane,
-      name: "Airport Transfer",
-      description: "Premium vehicles for comfortable airport pickup and drop-off",
-      details: ["Luxury Vehicles", "Professional Drivers", "Meet & Greet", "Luggage Assistance"],
-      hours: "On Request",
-      charge: "Charges Apply",
+      name: "Large Outdoor Garden",
+      description:
+        "Our expansive, well-maintained garden provides a beautiful and serene space for relaxation, leisurely walks, and outdoor gatherings.",
+      details: ["Expansive Green Space", "Leisure Walks", "Outdoor Gatherings", "Serene Environment"],
+      hours: "All Day",
+      charge: "Complimentary",
       image: poolImage,
     },
   ];
@@ -167,6 +197,7 @@ export default function Facilities() {
                 </div>
               );
             })}
+            <p className="text-center text-muted-foreground"> At The Sanihara, each facility is thoughtfully designed to enhance comfort and engagement, ensuring your stay is well-rounded, rejuvenating, and memorable. </p>
           </div>
         </div>
       </section>
