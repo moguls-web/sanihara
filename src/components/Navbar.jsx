@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LocationSelector } from "./LocationSelector";
 import { cn } from "@/lib/utils";
@@ -24,6 +24,15 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Rooms", path: "/rooms" },
+    {
+      name: "Our Hotels",
+      children: [
+        { name: "The Sanihara Hotel & Resort", path: "#" },
+        { name: "Misty Heights By the Sanihara", path: "#" },
+        { name: "Guest House 555 NKI", path: "#" },
+        { name: "555 Nangka Guest House", path: "#" },
+      ],
+    },
     { name: "Dining", path: "/dining" },
     { name: "Events", path: "/events" },
     { name: "Facilities", path: "/facilities" },
@@ -50,18 +59,43 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6">            
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={link.path}
-                className={cn(
-                  "text-sm font-light tracking-wide transition-colors",
-                  pathname === link.path
-                    ? "text-brand"
-                    : "text-foreground/80 hover:text-foreground"
-                )}
-              >
-                {link.name}
-              </Link>
+              link.children ? (
+                <div key={link.name} className="relative group">
+                  <button
+                    type="button"
+                    className="text-sm font-light tracking-wide transition-colors text-foreground/80 hover:text-foreground inline-flex items-center gap-1"
+                  >
+                    {link.name}
+                    <ChevronDown className="h-4 w-4" />
+                  </button>
+                  <div className="absolute left-0 top-full mt-2 w-64 rounded-lg border border-border bg-background shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      {link.children.map((sublink) => (
+                        <Link
+                          key={sublink.name}
+                          href={sublink.path}
+                          className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-secondary/50 transition-colors"
+                        >
+                          {sublink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className={cn(
+                    "text-sm font-light tracking-wide transition-colors",
+                    pathname === link.path
+                      ? "text-brand"
+                      : "text-foreground/80 hover:text-foreground"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              )
             ))} 
           </div>
 
@@ -93,19 +127,37 @@ const Navbar = () => {
           <div className="container mx-auto px-4 py-4 space-y-2">
             <LocationSelector />
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={link.path}
-                onClick={() => setIsOpen(false)}
-                className={cn(
-                  "block px-4 py-3 text-sm font-light transition-colors",
-                  pathname === link.path
-                    ? "text-brand"
-                    : "text-foreground/80 hover:text-foreground"
-                )}
-              >
-                {link.name}
-              </Link>
+              link.children ? (
+                <div key={link.name} className="px-4 py-3">
+                  <p className="text-sm font-light text-foreground">{link.name}</p>
+                  <div className="mt-2 ml-3 border-l border-border pl-3 space-y-1">
+                    {link.children.map((sublink) => (
+                      <Link
+                        key={sublink.name}
+                        href={sublink.path}
+                        onClick={() => setIsOpen(false)}
+                        className="block py-1 text-sm text-foreground/80 hover:text-foreground transition-colors"
+                      >
+                        {sublink.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "block px-4 py-3 text-sm font-light transition-colors",
+                    pathname === link.path
+                      ? "text-brand"
+                      : "text-foreground/80 hover:text-foreground"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
             <div className="pt-4 space-y-3">
               <a
