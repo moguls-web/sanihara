@@ -5,6 +5,7 @@ import { CinematicHero } from "@/components/CinematicHero";
 import { ParallaxSection } from "@/components/ParallaxSection";
 import RoomCard from "@/components/RoomCard";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowRight, Sparkles, Wine, Dumbbell, Wifi } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,34 +16,112 @@ import poolImage from "@/assets/pool-infinity.jpg";
 export default function Home() {
   const rooms = [
     {
-      id: "presidential-villa",
-      name: "Presidential Villa",
+      id: "doubleNonAC",
+      name: "Double - Non AC",
+      subheading: "Elegant Simplicity for a Comfortable Stay",
       image: suiteImage,
-      description: "Ultimate luxury with private pool and panoramic views",
-      price: 25000,
-      capacity: 4,
-      size: 1200,
-      amenities: ["Private Pool", "Panoramic Views", "Butler Service", "Premium Bar"],
+      description:
+        "Our Double Non-AC room provides a warm, cozy retreat with a spacious layout, offering a comfortable queen bed. Perfect for couples or solo travelers, this room ensures a restful and relaxing environment.",
+      price: 5000,
+      capacity: 2,
+      size: 300,
+      amenities: ["1 Queen Bed", "Free WiFi", "Room Service", "Daily Housekeeping", "Cable TV"],
     },
     {
-      id: "royal-classic-suite",
-      name: "Royal Classic Suite",
+      id: "twinNonAC",
+      name: "Twin - Non AC",
+      subheading: "The Perfect Space for Friends or Small Families",
       image: suiteImage,
-      description: "Spacious elegance with premium amenities",
+      description:
+        "Enjoy a comfortable and spacious stay in our Twin Non-AC room. With two super single beds, this room offers a relaxed environment for up to three guests. Whether you’re traveling with a friend or family.",
       price: 8500,
       capacity: 2,
       size: 500,
-      amenities: ["King Bed", "Premium View", "Mini Bar", "Balcony"],
+      amenities: ["2 Super Single Beds", "Free WiFi", "Room Service", "Daily Housekeeping", "Cable TV"],
     },
     {
-      id: "family-villa",
-      name: "Family Villa",
+      id: "tripleNonAC",
+      name: "Triple – Non AC",
+      subheading: "Ample Space for Families and Small Groups",
       image: suiteImage,
-      description: "Perfect for families with garden access",
+      description:
+        "Our Triple Non-AC room is the perfect choice for families or small groups. With a queen bed and a super single bed, this spacious room comfortably accommodates up to four guests.",
       price: 10000,
       capacity: 4,
       size: 600,
-      amenities: ["Garden View", "2 Queen Beds", "Living Area", "Kitchenette"],
+      amenities: ["1 Queen Bed + 1 Super Single Bed", "Free WiFi", "Room Service", "Daily Housekeeping", "Cable TV"],
+    },
+    {
+      id: "family4sharingNonAC",
+      name: "Family 4-sharing – Non AC",
+      subheading: "A Perfect Family Getaway",
+      image: poolImage,
+      description:
+        "Designed with families in mind, our Family 4-sharing Non-AC room offers a queen bed and two super single beds to comfortably accommodate up to five guests.",
+      price: 25000,
+      capacity: 4,
+      size: 1200,
+      amenities: ["1 Queen Bed + 2 Super Single Beds", "Free WiFi", "Room Service", "Daily Housekeeping", "Cable TV"],
+    },
+    {
+      id: "largeFamily6sharingNonAC",
+      name: "Large Family 6-sharing – Non AC",
+      subheading: "The Ultimate Family Space for a Comfortable Stay",
+      image: poolImage,
+      description:
+        "The Large Family 6-sharing Non-AC room is designed to comfortably accommodate larger families, with two queen beds and two super single beds, perfect for up to eight guests.",
+      price: 25000,
+      capacity: 4,
+      size: 1200,
+      amenities: ["2 Queen Beds + 2 Super Single Beds", "Free WiFi", "Room Service", "Daily Housekeeping", "Cable TV"],
+    },
+    {
+      id: "classicDoubleAC",
+      name: "Classic Double – AC",
+      subheading: "Sophisticated Comfort and Style",
+      image: poolImage,
+      description:
+        "The Classic Double AC room offers a luxurious and comfortable setting, featuring a queen bed and an air-conditioned environment. Whether you’re here for business or leisure.",
+      price: 25000,
+      capacity: 4,
+      size: 1200,
+      amenities: ["1 Queen Bed", "Air Conditioning", "Free WiFi", "Room Service", "Daily Housekeeping"],
+    },
+    {
+      id: "classicTwinAC",
+      name: "Classic Twin – AC",
+      subheading: "Relaxing and Comfortable for Two",
+      image: poolImage,
+      description:
+        "Our Classic Twin AC room offers two single beds, ideal for friends or colleagues looking for a comfortable and relaxing space. With the perfect balance of comfort and convenience.",
+      price: 25000,
+      capacity: 4,
+      size: 1200,
+      amenities: ["2 Single Beds", "Air Conditioning", "Free WiFi", "Room Service", "Daily Housekeeping"],
+    },
+    {
+      id: "classicDoubleGardenViewAC",
+      name: "Classic Double Garden View – AC",
+      subheading: "Serenity with a View",
+      image: poolImage,
+      description:
+        "Enjoy the tranquil garden views in our Classic Double Garden View. Featuring a queen bed, this room is the perfect place for couples or solo travelers who wish to experience relaxation in a serene environment.",
+      price: 25000,
+      capacity: 4,
+      size: 1200,
+      amenities: ["1 Queen Bed", "Garden View", "Air Conditioning", "Free WiFi", "Room Service"],
+    },
+    {
+      id: "classicTwinGardenViewAC",
+      name: "Classic Twin Garden View – AC",
+      subheading: "Peaceful Comfort with Garden Views",
+      image: poolImage,
+      description:
+        "The Classic Twin Garden View room offers a relaxing space with two single beds and a picturesque view of the lush gardens. Ideal for friends or small families, this room combines the beauty of nature with the luxury of modern amenities.",
+      price: 25000,
+      capacity: 4,
+      size: 1200,
+      amenities: ["1 Queen Bed", "Garden View", "Air Conditioning", "Free WiFi", "Room Service"],
     },
   ];
 
@@ -81,21 +160,29 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {rooms.map((room, index) => (
-              <ParallaxSection key={room.name} speed={0.2 * (index + 1)}>
-                <motion.div
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeInUpVariants}
-                  transition={{ delay: index * 0.2 }}
-                >
-                  <RoomCard {...room} />
-                </motion.div>
-              </ParallaxSection>
-            ))}
-          </div>
+          <Carousel
+            opts={{ align: "start", loop: true }}
+            autoScrollMs={3000}
+            className="w-full"
+          >
+            <div className="flex justify-end gap-3 mb-6">
+              <CarouselPrevious />
+              <CarouselNext />
+            </div>
+            <CarouselContent className="items-center">
+              {rooms.map((room, index) => (
+                <CarouselItem key={room.name} className="basis-[85%] sm:basis-[60%] lg:basis-1/3">
+                  <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={fadeInUpVariants}
+                  >
+                    <RoomCard {...room} />
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
 
           <motion.div
             initial="hidden"
@@ -104,7 +191,7 @@ export default function Home() {
             variants={fadeInUpVariants}
             className="text-center mt-16"
           >
-            <Button variant="outline" size="lg" className="group" asChild>
+            <Button variant="outline" size="lg" className="group border-white text-white hover:bg-white hover:text-primary" asChild>
               <Link href="/suites">
                 Discover All Suites
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

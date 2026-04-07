@@ -116,34 +116,6 @@ export default function Suites() {
       amenities: ["1 Queen Bed", "Garden View", "Air Conditioning", "Free WiFi", "Room Service"],
     },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   ];
 
   const sortedRooms = [...rooms].sort((a, b) => {

@@ -14,7 +14,9 @@ export const ParallaxSection = ({ children, speed = 0.5, className = "" }) => {
 
   return (
     <div ref={ref} className={className}>
-      <motion.div style={{ y }}>{children}</motion.div>
+      <motion.div className="h-full w-full" style={{ y }}>
+        {children}
+      </motion.div>
     </div>
   );
 };
