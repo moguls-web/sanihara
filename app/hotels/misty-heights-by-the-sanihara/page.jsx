@@ -187,8 +187,8 @@ const roomSlides = [suiteImage, poolImage, diningImage];
 const superiorHeritageRoomSlides = [
     "/rooms/Superior-Heritage-room-non-ac/1.jpg",
     "/rooms/Superior-Heritage-room-non-ac/2.jpg",
-    "/rooms/Superior-Heritage-room-non-ac/3.jpg",
-    "/rooms/Superior-Heritage-room-non-ac/4.jpg",
+    "/rooms/Superior-Heritage-room-non-ac/3.JPG",
+    "/rooms/Superior-Heritage-room-non-ac/4.JPG",
     "/rooms/Superior-Heritage-room-non-ac/5.jpg",
     "/rooms/Superior-Heritage-room-non-ac/6.jpg",
     "/rooms/Superior-Heritage-room-non-ac/7.jpg",
@@ -196,31 +196,31 @@ const superiorHeritageRoomSlides = [
 ];
 const deluxeRoomSlides = [
     "/rooms/Deluxe-non-ac/1.jpg",
-    "/rooms/Superior-Heritage-room-non-ac/3.jpg",
-    "/rooms/Superior-Heritage-room-non-ac/4.jpg",
-"/rooms/Superior-Heritage-room-non-ac/7.jpg",
+    "/rooms/Superior-Heritage-room-non-ac/3.JPG",
+    "/rooms/Superior-Heritage-room-non-ac/4.JPG",
+    "/rooms/Superior-Heritage-room-non-ac/7.jpg",
     "/rooms/Superior-Heritage-room-non-ac/8.jpg"
 ];
 const familyAttachedRoomSlides = [
     "/rooms/Family-Room-four-Sharing-Attached-Bathroom/1.jpg",
-    "/rooms/Family-Room-four-Sharing-Attached-Bathroom/2.jpg",
-    "/rooms/Family-Room-four-Sharing-Attached-Bathroom/3.jpg",
-    "/rooms/Family-Room-four-Sharing-Attached-Bathroom/4.jpg",
-    "/rooms/Family-Room-four-Sharing-Attached-Bathroom/5.jpg",
+    "/rooms/Family-Room-four-Sharing-Attached-Bathroom/2.JPG",
+    "/rooms/Family-Room-four-Sharing-Attached-Bathroom/3.JPG",
+    "/rooms/Family-Room-four-Sharing-Attached-Bathroom/4.JPG",
+    "/rooms/Family-Room-four-Sharing-Attached-Bathroom/5.JPG",
 ];
 const familyDetachedRoomSlides = [
     "/rooms/Family-Room-four-Sharing-Detached-Bathroom/1.jpg",
-    "/rooms/Family-Room-four-Sharing-Detached-Bathroom/2.jpg",
-    "/rooms/Family-Room-four-Sharing-Detached-Bathroom/3.jpg",
-    "/rooms/Family-Room-four-Sharing-Detached-Bathroom/4.jpg"
+    "/rooms/Family-Room-four-Sharing-Detached-Bathroom/2.JPG",
+    "/rooms/Family-Room-four-Sharing-Detached-Bathroom/3.JPG",
+    "/rooms/Family-Room-four-Sharing-Detached-Bathroom/4.JPG"
 ];
 const premiumDormitorySlides = [
-    "/rooms/Premium-Dormitory/1.jpg",
-    "/rooms/Premium-Dormitory/2.jpg",
-    "/rooms/Premium-Dormitory/3.jpg",
-    "/rooms/Premium-Dormitory/4.jpg",
-    "/rooms/Premium-Dormitory/5.jpg",
-    "/rooms/Premium-Dormitory/6.jpg",
+    "/rooms/Premium-Dormitory/1.JPG",
+    "/rooms/Premium-Dormitory/2.JPG",
+    "/rooms/Premium-Dormitory/3.JPG",
+    "/rooms/Premium-Dormitory/4.JPG",
+    "/rooms/Premium-Dormitory/5.JPG",
+    "/rooms/Premium-Dormitory/6.JPG",
 ];
 
 const roomSlidesByTitle = {
@@ -273,7 +273,7 @@ export default function MistyHeightsPage() {
             <section className="py-14 md:py-16 bg-secondary/30">
                 <div className="container mx-auto px-4 max-w-12xl">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-                        <div> 
+                        <div>
                             <div className="text-left mb-12">
                                 <h2 className="text-6xl md:text-7xl font-display font-light mb-6 tracking-tight">
                                     Discover Home in Misty Heights Heritage - A Premium Hotel in Vythiri
@@ -281,7 +281,7 @@ export default function MistyHeightsPage() {
                                 <div className="h-[3px] w-24 bg-[#b43a3a]  mt-5 rounded-full" />
                                 <p className="text-base md:text-xl mt-2 text-foreground/85 leading-relaxed">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae totam delectus quas iusto repellat? Veritatis, libero.
-                                    </p>
+                                </p>
                             </div>
                             <div className="space-y-4 text-base md:text-lg text-foreground/85 leading-relaxed">
                                 <p>
@@ -416,7 +416,7 @@ export default function MistyHeightsPage() {
                 <div className="container mx-auto px-4 max-w-[92rem]">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
                         <div>
-                            
+
                             <div className="text-left mb-12">
                                 <h2 className="text-6xl md:text-7xl font-display font-light mb-6 tracking-tight">
                                     Elevated Garden Gazebo Experience
@@ -424,8 +424,8 @@ export default function MistyHeightsPage() {
                                 <div className="h-[3px] w-24 bg-[#b43a3a]  mt-5 rounded-full" />
                                 <p className="text-base md:text-xl mt-2 text-foreground/85 leading-relaxed">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae totam delectus quas iusto repellat? Veritatis, libero.
-                                    </p>
-                            </div> 
+                                </p>
+                            </div>
                             <div className="space-y-4 text-base md:text-lg text-foreground/85 leading-relaxed">
                                 <p>
                                     A serene highlight of one of the most nature-rich resorts in Vythiri, offering relaxation with scenic views and traditional aesthetics.
@@ -457,16 +457,16 @@ export default function MistyHeightsPage() {
             </section>
 
             <section className="py-14">
-                <div className="container mx-auto px-4 max-w-[92rem]"> 
+                <div className="container mx-auto px-4 max-w-[92rem]">
                     <div className="text-center mb-12">
                         <h2 className="text-6xl md:text-7xl font-display font-light mb-6 tracking-tight">
-                        Highlights of Misty Heights by The Sanihara
+                            Highlights of Misty Heights by The Sanihara
                         </h2>
                         <div className="h-[3px] w-24 bg-[#b43a3a] mx-auto mt-5 rounded-full" />
                         <p className="text-base md:text-xl mt-2 text-foreground/85 leading-relaxed">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae totam delectus quas iusto repellat? Veritatis, libero.
-                            </p>
-                    </div> 
+                        </p>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
                         {highlights.map((item) => (
                             <article key={item.title} className="bg-background rounded-xl p-6 border border-border">
