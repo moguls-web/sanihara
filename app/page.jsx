@@ -310,7 +310,7 @@ export default function Home() {
                 <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-light text-white tracking-tight drop-shadow-2xl">
                   Infinite Horizons
                 </h2>
-              </div>
+              </div>``
             </motion.div>
           </div>
         </ParallaxSection>

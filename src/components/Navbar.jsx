@@ -25,14 +25,12 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Rooms", path: "/rooms" },
     {
-      name: "Our Hotels",
-      children: [
-        { name: "The Sanihara Hotel & Resort", path: "#" },
-        { name: "Misty Heights By the Sanihara", path: "#" },
-        { name: "Guest House 555 NKI", path: "#" },
-        { name: "555 Nangka Guest House", path: "#" },
-      ],
-    },
+      name: "Our Hotels" , path: "/hotels", children: [ 
+        { name: "The Sanihara Hotel & Resort", path: "/hotels/the-sanihara-hotel-resort" },
+        { name: "Misty Heights By the Sanihara", path: "/hotels/misty-heights-by-the-sanihara" },
+        { name: "Guest House 555 NKI", path: "/hotels/guest-house-555-nkl" },  
+        { name: "555 Nangka Guest House", path: "/hotels/555-nangka-guest-house" } 
+      ] },
     { name: "Dining", path: "/dining" },
     { name: "Events", path: "/events" },
     { name: "Facilities", path: "/facilities" },
@@ -61,13 +59,13 @@ const Navbar = () => {
             {navLinks.map((link) => (
               link.children ? (
                 <div key={link.name} className="relative group">
-                  <button
-                    type="button"
+                  <Link
+                    href={link.path}
                     className="text-sm font-light tracking-wide transition-colors text-foreground/80 hover:text-foreground inline-flex items-center gap-1"
                   >
                     {link.name}
                     <ChevronDown className="h-4 w-4" />
-                  </button>
+                  </Link>
                   <div className="absolute left-0 top-full mt-2 w-64 rounded-lg border border-border bg-background shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
                       {link.children.map((sublink) => (
@@ -129,7 +127,13 @@ const Navbar = () => {
             {navLinks.map((link) => (
               link.children ? (
                 <div key={link.name} className="px-4 py-3">
-                  <p className="text-sm font-light text-foreground">{link.name}</p>
+                  <Link
+                    href={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className="text-sm font-light text-foreground hover:text-brand transition-colors"
+                  >
+                    {link.name}
+                  </Link>
                   <div className="mt-2 ml-3 border-l border-border pl-3 space-y-1">
                     {link.children.map((sublink) => (
                       <Link

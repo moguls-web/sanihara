@@ -51,7 +51,7 @@ const RoomCard = ({ id, name, subheading, description, image, price, capacity, s
         </div>
       </CardContent>
       <CardFooter className="p-6 pt-0 flex space-x-3">
-        <Button variant="outline" size="default" className="flex-1" asChild>
+        <Button variant="outline" size="default" className="flex-1 text-white" asChild>
           <Link href={`/suites/${id}`}>View Details</Link>
         </Button>
         <Button variant="brand" size="default" className="flex-1">
