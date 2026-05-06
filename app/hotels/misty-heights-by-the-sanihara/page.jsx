@@ -11,22 +11,25 @@ import {
 } from "@/components/ui/carousel";
 
 const freeImages = {
-    hero: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2000&q=80",
+    hero: "/misty-banner.webp",
     introOne:
-        "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=80",
+        "/mist-skyview-1.webp",
     introTwo:
-        "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1400&q=80",
-    gazebo:
-        "/89456.jpg",
-    pool: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1400&q=80",
-    deck: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=80",
-    kids: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1400&q=80",
+        "/46578.webp",
+    introThree:"/Bungalow-downstairs2.webp",
+
+
+
+    gazebo: "/89456.jpg",
+    pool: "/Swimming-pool.webp",
+    deck: "/Panoramic-View-Deck.webp",
+    kids: "/039ac7f6.webp",
     bonfire:
-        "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1400&q=80",
+        "/3271b747.webp",
     badminton:
-        "https://images.pexels.com/photos/5739122/pexels-photo-5739122.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "/Badminton.webp",
     nature:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80",
+        "/Environment.webp",
 };
 
 export const metadata = {
@@ -235,13 +238,13 @@ const roomSlidesByTitle = {
 const introSlides = [
     freeImages.introOne,
     freeImages.introTwo,
-    freeImages.gazebo,
+    freeImages.introThree,
 ];
 
 export default function MistyHeightsPage() {
     return (
         <main className="min-h-screen pt-20">
-            <section className="relative text-primary-foreground py-24 md:py-28 overflow-hidden ">
+            <section className="relative text-primary-foreground py-24 md:py-48 overflow-hidden ">
                 <Image
                     src={freeImages.hero}
                     alt="Misty Heights By the Sanihara"
@@ -273,7 +276,7 @@ export default function MistyHeightsPage() {
             <section className="py-14 md:py-16 bg-secondary/30">
                 <div className="container mx-auto px-4 max-w-12xl">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-                        <div>
+                        <div> 
                             <div className="text-left mb-12">
                                 <h2 className="text-6xl md:text-7xl font-display font-light mb-6 tracking-tight">
                                     Discover Home in Misty Heights Heritage - A Premium Hotel in Vythiri
@@ -281,7 +284,7 @@ export default function MistyHeightsPage() {
                                 <div className="h-[3px] w-24 bg-[#b43a3a]  mt-5 rounded-full" />
                                 <p className="text-base md:text-xl mt-2 text-foreground/85 leading-relaxed">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae totam delectus quas iusto repellat? Veritatis, libero.
-                                </p>
+                                    </p>
                             </div>
                             <div className="space-y-4 text-base md:text-lg text-foreground/85 leading-relaxed">
                                 <p>
@@ -333,7 +336,7 @@ export default function MistyHeightsPage() {
                                                         Misty Heights
                                                     </p>
                                                     <p className="text-lg md:text-2xl font-serif">
-                                                        Scenic View {index + 1}
+                                                         
                                                     </p>
                                                 </div>
                                             </div>
@@ -416,7 +419,7 @@ export default function MistyHeightsPage() {
                 <div className="container mx-auto px-4 max-w-[92rem]">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
                         <div>
-
+                            
                             <div className="text-left mb-12">
                                 <h2 className="text-6xl md:text-7xl font-display font-light mb-6 tracking-tight">
                                     Elevated Garden Gazebo Experience
@@ -424,8 +427,8 @@ export default function MistyHeightsPage() {
                                 <div className="h-[3px] w-24 bg-[#b43a3a]  mt-5 rounded-full" />
                                 <p className="text-base md:text-xl mt-2 text-foreground/85 leading-relaxed">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae totam delectus quas iusto repellat? Veritatis, libero.
-                                </p>
-                            </div>
+                                    </p>
+                            </div> 
                             <div className="space-y-4 text-base md:text-lg text-foreground/85 leading-relaxed">
                                 <p>
                                     A serene highlight of one of the most nature-rich resorts in Vythiri, offering relaxation with scenic views and traditional aesthetics.
@@ -457,21 +460,21 @@ export default function MistyHeightsPage() {
             </section>
 
             <section className="py-14">
-                <div className="container mx-auto px-4 max-w-[92rem]">
+                <div className="container mx-auto px-4 max-w-[92rem]"> 
                     <div className="text-center mb-12">
                         <h2 className="text-6xl md:text-7xl font-display font-light mb-6 tracking-tight">
-                            Highlights of Misty Heights by The Sanihara
+                        Highlights of Misty Heights by The Sanihara
                         </h2>
                         <div className="h-[3px] w-24 bg-[#b43a3a] mx-auto mt-5 rounded-full" />
                         <p className="text-base md:text-xl mt-2 text-foreground/85 leading-relaxed">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae totam delectus quas iusto repellat? Veritatis, libero.
-                        </p>
-                    </div>
+                            </p>
+                    </div> 
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
                         {highlights.map((item) => (
-                            <article key={item.title} className="bg-background rounded-xl p-6 border border-border">
-                                <div className="relative h-52 rounded-lg overflow-hidden mb-4">
-                                    <Image src={item.image} alt={item.title} fill className="object-cover" />
+                            <article key={item.title} className="bg-background rounded-xl p-3 border border-border">
+                                <div className="relative h-72 rounded-lg overflow-hidden mb-4">
+                                    <Image src={item.image} alt={item.title} fill className="object-cover rounded-2xl" />
                                 </div>
                                 <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
                                 <p className="text-foreground/85 leading-relaxed">{item.description}</p>
