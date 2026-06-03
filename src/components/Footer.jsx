@@ -1,9 +1,41 @@
+"use client";
+
 import Link from "next/link";
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
+const defaultContact = {
+  address: "8/468A Lakkidi, Wayanad, Kerala 673576 – India",
+  phone: "+91-1234567890",
+  phoneHref: "tel:+911234567890",
+  email: "info@thesanihara.com",
+  workingHours: "24/7 Reception",
+};
+
+const hotelContacts = {
+  "/hotels/guest-house-555-nkl": {
+    address:
+      "Jl. Merica, RT.1/RW.12, Banten, Kec. Pamulang, Kota Tangerang Selatan, Banten 15418, Indonesia",
+    phone: "+62 812-1293-5550",
+    phoneHref: "tel:+6281212935550",
+    email: "guesthousemerica@gmail.com",
+    workingHours: "24/7 Reception",
+  },
+  "/hotels/misty-heights-by-the-sanihara": {
+    address: "Old Vythiri, Vythiri, Kerala 673576",
+    phone: "+91 85472 96999",
+    phoneHref: "tel:+918547296999",
+    email: "reservations@thesanihara.com",
+    workingHours: "24/7 Reception",
+  },
+};
+
 const Footer = () => {
+  const pathname = usePathname();
+  const contact = hotelContacts[pathname] ?? defaultContact;
+
   return (
     <footer className="bg-[#1a1a1a] text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
@@ -88,19 +120,23 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span>8/468A Lakkidi, Wayanad, Kerala 673576 – India</span>
+                <span>{contact.address}</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                <a href="tel:+911234567890" className="hover:text-brand transition-colors">
-                  +91-1234567890
+                <a href={contact.phoneHref} className="hover:text-brand transition-colors">
+                  {contact.phone}
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <a href="mailto:info@thesanihara.com" className="hover:text-brand transition-colors">
-                  info@thesanihara.com
+                <a href={`mailto:${contact.email}`} className="hover:text-brand transition-colors">
+                  {contact.email}
                 </a>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Clock className="h-5 w-5 flex-shrink-0" />
+                <span>{contact.workingHours}</span>
               </li>
             </ul>
           </div>
