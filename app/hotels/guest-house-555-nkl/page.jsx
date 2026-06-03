@@ -22,11 +22,11 @@ const freeImages = {
     bonfire: "/3271b747.webp",
     badminton: "/Badminton.webp",
     nature: "/Environment.webp",
-    blobCoffeeBar: "/Blob-Coffee-Bar.webp",
+    blobCoffeeBar: "/blob-coffee-bar.webp",
     inRoomDining: "/In-Room-Dining.webp",
-    gymnasium: "/Gymnasium.webp",
+    gymnasium: "/gymnasium.webp",
     joggingTracks: "/JOGGING-TRACK.webp",
-    dailyHousekeeping: "/Daily-Housekeeping.webp",
+    dailyHousekeeping: "/daily-housekeeping.webp",
     Mushola: "/Mushola.webp",
 
 };
