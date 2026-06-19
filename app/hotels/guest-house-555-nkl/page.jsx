@@ -11,11 +11,11 @@ import {
 } from "@/components/ui/carousel";
 
 const freeImages = {
-    hero: "/misty-banner.webp",
-    introOne: "/mist-skyview-1.webp",
-    introTwo: "/46578.webp",
-    introThree: "/Bungalow-downstairs2.webp",
-    gazebo: "/89456.jpg",
+    hero: "/HERO-new.webp",
+    introOne: "/Tropical1.webp",
+    introTwo: "/Tropical2.webp",
+    introThree: "/Tropical3.webp",
+    gazebo: "/456787iuyjyhg.webp",
     pool: "/Swimming-pool.webp",
     deck: "/Panoramic-View-Deck.webp",
     kids: "/039ac7f6.webp",
