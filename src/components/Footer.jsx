@@ -30,6 +30,12 @@ const hotelContacts = {
     email: "reservations@thesanihara.com",
     workingHours: "24/7 Reception",
   },
+  "/hotels/555-nangka-guest-house": {
+    address: "Jl. Nangka IV No.21, RT.10/RW.2, Cipete Utara, Kec. Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta 12150, Indonesia",
+    phone: "+62 813-6775-5515", 
+    email: "555nangka@gmail.com",
+    workingHours: "24/7 Reception",
+  },
 };
 
 const Footer = () => {
