@@ -12,10 +12,10 @@ import {
 
 const freeImages = {
     hero: "/Jakarta-hero.webp",
-    introOne: "/ARW04498.jpg",
-    introTwo: "/ARW04498.jpg",
-    introThree: "/ARW04498.jpg",
-    gazebo: "/ARW04692.jpg",
+    introOne: "/ARW04498.JPG",
+    introTwo: "/ARW04498.JPG",
+    introThree: "/ARW04498.JPG",
+    gazebo: "/ARW04692.JPG",
     pool: "/Swimming-pool.webp",
     deck: "/Panoramic-View-Deck.webp",
     kids: "/039ac7f6.webp",
@@ -28,9 +28,9 @@ const freeImages = {
     joggingTracks: "/JOGGING-TRACK.webp",
     dailyHousekeeping: "/daily-housekeeping.webp",
     Mushola: "/Mushola.webp",
-    reception: "/24-Hour-Reception.JPEG",
-    wifi: "/Free-Wi-FiThroughout.JPEG",
-    parking: "/Free-Parking-1.jpg",
+    reception: "/24-Hour-Reception.jpeg",
+    wifi: "/Free-Wi-FiThroughout.jpeg",
+    parking: "/Free-Parking-1.JPG",
     hajiNawiMRT: "/MRT.jpg",
 };
 
@@ -146,34 +146,34 @@ const highlights = [
 
 const roomSlides = [suiteImage, poolImage, diningImage];
 const SuiteSlides = [
-    "/rooms/nangka/Suite-Room/1.JPEG",
-    "/rooms/nangka/Suite-Room/2.JPEG",
-    "/rooms/nangka/Suite-Room/3.JPEG",
-    "/rooms/nangka/Suite-Room/4.JPEG",
+    "/rooms/nangka/Suite-Room/1.jpeg",
+    "/rooms/nangka/Suite-Room/2.jpeg",
+    "/rooms/nangka/Suite-Room/3.jpeg",
+    "/rooms/nangka/Suite-Room/4.jpeg",
 ];
 const DeluxeSlides = [
-    "/rooms/nangka/Deluxe-Room/1.JPEG",
-    "/rooms/nangka/Deluxe-Room/2.JPEG",
-    "/rooms/nangka/Deluxe-Room/3.JPEG",
-    "/rooms/nangka/Deluxe-Room/4.JPEG",
+    "/rooms/nangka/Deluxe-Room/1.jpeg",
+    "/rooms/nangka/Deluxe-Room/2.jpeg",
+    "/rooms/nangka/Deluxe-Room/3.jpeg",
+    "/rooms/nangka/Deluxe-Room/4.jpeg",
 ];
 const SuperiorSingleSlides = [
-    "/rooms/nangka/Superior-Single-Room/1.JPEG",
-    "/rooms/nangka/Superior-Single-Room/2.JPEG",
-    "/rooms/nangka/Superior-Single-Room/3.JPEG",
-    "/rooms/nangka/Superior-Single-Room/4.JPEG",
+    "/rooms/nangka/Superior-Single-Room/1.jpeg",
+    "/rooms/nangka/Superior-Single-Room/2.jpeg",
+    "/rooms/nangka/Superior-Single-Room/3.jpeg",
+    "/rooms/nangka/Superior-Single-Room/4.jpeg",
 ];
 const StandardSingleSlides = [
-    "/rooms/nangka/Standard-Single-Room/1.JPEG",
-    "/rooms/nangka/Standard-Single-Room/2.JPEG",
-    "/rooms/nangka/Standard-Single-Room/3.JPEG",
-    "/rooms/nangka/Standard-Single-Room/4.JPEG",
+    "/rooms/nangka/Standard-Single-Room/1.jpeg",
+    "/rooms/nangka/Standard-Single-Room/2.jpeg",
+    "/rooms/nangka/Standard-Single-Room/3.jpeg",
+    "/rooms/nangka/Standard-Single-Room/4.jpeg",
 ];
 const SuperiorDoubleRoomSlides = [
-    "/rooms/nangka/Superior-Double-Room/1.JPEG",
-    "/rooms/nangka/Superior-Double-Room/2.JPEG",
-    "/rooms/nangka/Superior-Double-Room/3.JPEG",
-    "/rooms/nangka/Superior-Double-Room/4.JPEG",
+    "/rooms/nangka/Superior-Double-Room/1.jpeg",
+    "/rooms/nangka/Superior-Double-Room/2.jpeg",
+    "/rooms/nangka/Superior-Double-Room/3.jpeg",
+    "/rooms/nangka/Superior-Double-Room/4.jpeg",
 ];
 
 const roomSlidesByTitle = {
