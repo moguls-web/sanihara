@@ -22,6 +22,7 @@ const hotelContacts = {
     phoneHref: "tel:+6281212935550",
     email: "guesthousemerica@gmail.com",
     workingHours: "24/7 Reception",
+    footerAbout: "A sanctuary above the clouds. Experience luxury amidst the pristine rainforest of Wayanad, Kerala.",
   },
   "/hotels/misty-heights-by-the-sanihara": {
     address: "Old Vythiri, Vythiri, Kerala 673576",
@@ -29,12 +30,22 @@ const hotelContacts = {
     phoneHref: "tel:+918547296999",
     email: "reservations@thesanihara.com",
     workingHours: "24/7 Reception",
+    footerAbout: "A sanctuary above the clouds. Experience luxury amidst the pristine rainforest of Wayanad, Kerala.",
   },
   "/hotels/555-nangka-guest-house": {
     address: "Jl. Nangka IV No.21, RT.10/RW.2, Cipete Utara, Kec. Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta 12150, Indonesia",
     phone: "+62 813-6775-5515", 
     email: "555nangka@gmail.com",
     workingHours: "24/7 Reception",
+    footerAbout: "A sanctuary above the clouds. Experience luxury amidst the pristine rainforest of Wayanad, Kerala.",
+  },
+  "/hotels/the-sanihara-hotel-resort": {
+    address: "8/468A Lakkidi, Wayanad, Kerala 673576 – India",
+    phone: "+91-1234567890",
+    phoneHref: "tel:+911234567890",
+    email: "info@thesanihara.com",
+    workingHours: "24/7 Reception",
+    footerAbout: "A sanctuary above the clouds. Escape to the pristine rainforests and misty hilltops of Wayanad, Kerala — where luxury meets nature, and every moment is a memory in the making.",
   },
 };
 
@@ -48,9 +59,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-serif font-bold">The Sanihara</h3>
+            <h3 className="text-2xl font-serif font-bold">The Sanihara Hotel & Resort</h3>
             <p className="text-sm opacity-90">
-              A sanctuary above the clouds. Experience luxury amidst the pristine rainforest of Wayanad, Kerala.
+              {contact.footerAbout}              
             </p>
             <div className="flex space-x-4">
               <a

@@ -93,43 +93,51 @@ const CarouselItem = React.forwardRef(({ className, ...props }, ref) => (
 ));
 CarouselItem.displayName = "CarouselItem";
 
-const CarouselPrevious = React.forwardRef(({ className, ...props }, ref) => {
+const CarouselPrevious = React.forwardRef(({ className, variant = "outline", size = "icon", children, ...props }, ref) => {
   const { scrollPrev, canScrollPrev } = useCarousel();
 
   return (
     <Button
       ref={ref}
       type="button"
-      variant="outline"
-      size="icon"
+      variant={variant}
+      size={size}
       className={cn("h-10 w-10", className)}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeft className="h-4 w-4" />
-      <span className="sr-only">Previous slide</span>
+      {children ?? (
+        <>
+          <ChevronLeft className="h-4 w-4" />
+          <span className="sr-only">Previous slide</span>
+        </>
+      )}
     </Button>
   );
 });
 CarouselPrevious.displayName = "CarouselPrevious";
 
-const CarouselNext = React.forwardRef(({ className, ...props }, ref) => {
+const CarouselNext = React.forwardRef(({ className, variant = "outline", size = "icon", children, ...props }, ref) => {
   const { scrollNext, canScrollNext } = useCarousel();
 
   return (
     <Button
       ref={ref}
       type="button"
-      variant="outline"
-      size="icon"
+      variant={variant}
+      size={size}
       className={cn("h-10 w-10", className)}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRight className="h-4 w-4" />
-      <span className="sr-only">Next slide</span>
+      {children ?? (
+        <>
+          <ChevronRight className="h-4 w-4" />
+          <span className="sr-only">Next slide</span>
+        </>
+      )}
     </Button>
   );
 });
