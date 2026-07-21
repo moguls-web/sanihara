@@ -43,12 +43,12 @@ const roomCategories = [
     {
         title: "Heritage Room (Non Air-Conditioned)",
         description:
-            "Perfect for guests who appreciate simplicity and traditional charm, this room offers a peaceful stay in one of the finest hotels in Vythiri Wayanad.",
+            "Perfect for guests who appreciate simplicity and traditional charm, the Heritage Room offers a spacious and serene retreat within the bungalow setting. With a dedicated living area and classic interiors inspired by heritage architecture, this room ensures a peaceful and relaxing stay.",
         details: [
             "Size: 36 sq. m (390 sq. ft)",
-            "Occupancy: 2 Adults (Maximum 4 Guests)",
-            "Bed Type: 1 King Size Bed",
-            "View: Limited / Off View",
+            "Occupancy: 2 Adults",
+            "Bed Type: 1 King-Size Bed",
+            "View: Off View",
             "Bathroom: Attached",
             "Location: Heritage Bungalow",
         ],
@@ -127,21 +127,21 @@ const highlights = [
         title: "Swimming Pool",
         image: freeImages.pool,
         description:
-            "Surrounded by the dense tropical greenery of Misty Heights, the swimming pool offers a serene escape where nature and relaxation come together effortlessly. Recognized as a preferred Wayanad resort with pool, the space is framed by lush landscapes and peaceful surroundings, creating the perfect setting for a refreshing swim or a quiet moment of calm.",
+            "Set in the heart of dense tropical foliage, our elegantly designed swimming pool offers a serene escape. Surrounded by natural greenery, the pool area provides both privacy and tranquility, making it ideal for a refreshing dip or quiet relaxation. The stone-paved deck enhances the aesthetic while ensuring comfort and safety.",
     },
     {
         title: "Panoramic View Deck",
         image: freeImages.deck,
         description:
-            "Enjoy misty hill views at one of the most scenic hotels in Vythiri Kerala. Experience breathtaking views from our elevated open-air deck, crafted with traditional roofing and architectural elegance. Overlooking misty hills and swaying palm groves, this space is perfect for enjoying morning coffee, reading, or simply soaking in the calm of nature—especially during light rains or foggy evenings.",
+            "Experience breathtaking views from our elevated open-air deck, crafted with traditional roofing and architectural elegance. Overlooking misty hills and swaying palm groves, this space is perfect for enjoying a morning coffee, reading, or simply soaking in the calm of nature — especially during light rains or foggy evenings.",
     },
     {
         title: "Children's Play Area",
         image: freeImages.kids,
         description:
-            "Perfect for families looking for Wayanad resorts for family with kid-friendly amenities. Families traveling with children will appreciate our thoughtfully arranged play zone. Set amidst bamboo groves and shaded greenery, the area features safe and colorful play equipment that encourages outdoor fun and exploration.",
+            "Families traveling with children will appreciate our thoughtfully arranged play zone. Set amidst bamboo groves and shaded greenery, the area features safe and colorful play equipment that encourages outdoor fun and exploration.",
         bullets: [
-            "Slides, swings, and merry-go-round",
+            "Slides, swings, and a merry-go-round",
             "Safe, natural surroundings",
             "Ideal for family stays",
         ],
@@ -150,8 +150,11 @@ const highlights = [
         title: "Bonfire Experience",
         image: freeImages.bonfire,
         description:
-            "A memorable highlight for guests staying at one of the coziest resorts in Vythiri. As evening descends, the bonfire area transforms into a warm and inviting space for guests to unwind. Gather around the glowing fire, share stories, and enjoy the serene ambiance of Wayanad’s cool nights. It’s an ideal setting for families, friends, or couples seeking a relaxed and memorable outdoor experience.",
-        bullets: ["Perfect for group gatherings", "Cozy atmosphere amidst nature"],
+            "As evening descends, the bonfire area transforms into a warm and inviting space where guests can unwind. Gather around the glowing fire, share stories, and enjoy the serene ambiance of Wayanad's cool nights. An ideal setting for families, friends, or couples seeking a relaxed and memorable outdoor experience.",
+        bullets: [
+            "Perfect for group gatherings",
+            "Cozy atmosphere amidst nature",
+        ],
     },
     {
         title: "Badminton Court",
@@ -255,18 +258,17 @@ export default function MistyHeightsPage() {
                 <div className="absolute inset-0 bg-black/55" />
                 <div className="container relative z-10 mx-auto px-4 text-center">
                     <h1 className="text-4xl md:text-6xl font-serif font-bold leading-tight">
-                        Welcome to the Misty Heights by The Sanihara <br />
-                        <span className="text-2xl md:text-5xl font-serif font-semibold">One of the Best Resorts in Vythiri</span>
+                        Welcome to Misty Heights by The Sanihara <br />
+                        <span className="text-2xl md:text-5xl font-serif font-semibold">One of the Best Resorts in Vythiri, Wayanad, Kerala</span>
 
                     </h1>
                     <div className="h-[3px] w-24 bg-[#b43a3a] mx-auto mt-5 rounded-full" />
                 </div>
             </section>
 
-
             <section className="container mx-auto py-16 px-4 max-w-4xl text-center ">
                 <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6 capitalize italic">
-                    Relax and Enjoy your Holidays at one of the most peaceful resorts in Vythiri Wayanad
+                    Relax and Enjoy Your Holidays at One of the Most Peaceful Resorts in Vythiri, Wayanad
                 </h2>
                 <p className="text-base md:text-xl mt-2 text-foreground/85 leading-relaxed">
                     Experiences at Misty Heights
@@ -284,23 +286,12 @@ export default function MistyHeightsPage() {
                                 <div className="h-[3px] w-24 bg-[#b43a3a]  mt-5 rounded-full" />
                             </div>
                             <div className="space-y-4 text-base md:text-lg text-foreground/85 leading-relaxed">
-                                <p>
-                                    Escape into the misty landscapes of Wayanad at Misty Heights by The Sanihara — a heritage retreat nestled in the heart of Old Vythiri. Surrounded by lush rainforests and serene hills, this premium stay blends timeless charm with modern comfort, making it one of the most peaceful places to stay in Vythiri.
-
-                                </p>
-                                <p>
-                                    Featuring elegant heritage rooms, spacious mountain-view suites, and flexible group accommodations, Misty Heights is ideal for couples, families, and gatherings. With the option to reserve the entire property for up to 70 guests, it stands out among the best resorts in Wayanad for memorable vacations, celebrations, and group retreats.
-
-                                </p>
+                                <p>Escape into the misty landscapes of Wayanad at Misty Heights by The Sanihara a heritage retreat nestled in the heart of Old Vythiri. Surrounded by lush rainforests and serene hills, this premium stay blends timeless charm with modern comfort, making it one of the most peaceful places to stay in Vythiri.</p>
+                                <p>Thoughtfully designed for couples, families, and groups, Misty Heights offers a blend of heritage charm and modern comfort. The property features a beautifully restored heritage bungalow with six spacious and elegantly appointed rooms, alongside expansive mountain-view family rooms and shared accommodations perfect for larger gatherings. For private events and group stays, the entire property can be exclusively reserved, accommodating up to 70 guests.</p>
                                 <p>The stay experience is uniquely divided across two distinct spaces:</p>
                                 <ul className="list-disc pl-6 space-y-2">
-                                    <li>
-                                        <strong>Heritage Bungalow:</strong> A 6-bedroom traditional structure featuring the Heritage Room, Deluxe Room, and Superior Heritage Room—ideal for guests seeking authentic Vythiri hotel rooms with timeless architecture inspired by Kerala’s heritage.
-
-                                    </li>
-                                    <li>
-                                        <strong>Modern Wing:</strong> A contemporary building offering well-appointed Family Rooms and a Premium Dormitory—perfect for guests searching for budget friendly resorts in Wayanad for family and group stays.
-                                    </li>
+                                    <li><strong>Heritage Bungalow:</strong> A six-bedroom traditional structure featuring the Heritage Room, Heritage Garden View Room, Superior Heritage Room, and Superior Heritage Mountain View Room — each showcasing timeless architecture and distinctive interiors inspired by Kerala's rich heritage.</li>
+                                    <li><strong>Modern Wing:</strong> A contemporary building offering well-appointed Family Rooms and a Premium Dormitory, thoughtfully designed for comfort, convenience, and group stays.</li>
                                 </ul>
                             </div>
                         </div>
@@ -415,9 +406,10 @@ export default function MistyHeightsPage() {
                                     Elevated Garden Gazebo Experience
                                 </h2>
                                 <div className="space-y-4 text-base md:text-lg text-foreground/85 leading-relaxed">
-                                    <p> Tucked amidst the misty greenery of Misty Heights by The Sanihara lies a charming elevated gazebo. A quiet little escape where time seems to slow down. As you walk up the gentle staircase, the soothing views of landscaped gardens, vibrant blooms, and swaying palms begin to unfold around you, welcoming you into a space designed for pure serenity.</p>
-                                    <p>Crafted with the timeless beauty of traditional wooden architecture and the durability of modern construction, the gazebo carries a warm, rustic charm while offering complete comfort in every season. Mornings here begin with the aroma of fresh coffee and soft mountain air, afternoons invite moments of peaceful reflection, and evenings are best spent listening to the whisper of the breeze through the trees.</p>
-                                    <p>More than just a viewpoint, this elevated retreat is where nature, comfort, and calm come together to create some of the most memorable moments of your stay in Wayanad.</p>
+                                    <p>Set amidst the lush greenery of Wayanad, the elevated garden gazebo at Misty Heights by The Sanihara offers a serene retreat thoughtfully designed for relaxation and scenic enjoyment. While the structure showcases the timeless charm of traditional wooden architecture, it is, in fact, constructed using durable concrete — expertly finished to replicate the warmth and elegance of wood.</p>
+                                    <p>Accessed via a gently rising staircase, the gazebo features a spacious covered deck supported by solid pillars and detailed railings, all crafted to reflect classic wooden aesthetics. This thoughtful design ensures both visual appeal and long-lasting strength, making it ideal for all weather conditions.</p>
+                                    <p>From this elevated vantage point, guests can take in sweeping views of the landscaped gardens, vibrant blooms, and swaying palms that define the tranquil surroundings. Whether enjoying a quiet morning coffee, a leisurely afternoon, or a peaceful evening breeze, the gazebo provides a private and refreshing escape.</p>
+                                    <p>At Misty Heights, every element is curated to harmonize comfort with nature, and this gazebo beautifully embodies that balance — offering the charm of wood with the reliability of modern construction.</p>
                                 </div>
                             </div>
                         </div>
@@ -441,7 +433,7 @@ export default function MistyHeightsPage() {
                         </h2>
                         <div className="h-[3px] w-24 bg-[#b43a3a] mx-auto mt-5 rounded-full" />
                         <p className="text-base md:text-xl mt-2 text-foreground/85 leading-relaxed">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae totam delectus quas iusto repellat? Veritatis, libero.
+                            Discover the experiences and facilities that make Misty Heights one of the most sought-after retreats in Vythiri, Wayanad.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
