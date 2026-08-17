@@ -396,15 +396,8 @@ export default function TheSaniharaHotelResortPage() {
 Our hotel features well-furnished rooms designed for couples, families, groups, and solo travelers alike. Rooms are equipped with contemporary amenities, stunning mountain views, and tropical garden outlooks — crafted to deliver comfort that surpasses other resorts in Wayanad.
 
                                 </p>
-                                <p> The stay experience is thoughtfully divided across two distinct areas:</p>
-                                <ul className="list-disc pl-6 text-foreground/85 space-y-1">
-                                    <li>
-                                        <b>Main Hotel Block:</b> Contemporary hotel rooms ranging from standard twin and double rooms to spacious family rooms - ideal for guests seeking modern amenities with easy access to all property facilities.
-                                    </li>
-                                    <li>
-                                    <b>Resort Wing:</b> Larger family and group-sharing rooms designed for extended families, corporate groups, and social gatherings, offering generous space with a resort-style ambiance.
-                                    </li>
-                                </ul>
+                                <p> At The Sanihara, we curate experiences that cater to relaxation, fitness, and fun. Guests can choose from a diverse selection of Hotel rooms while enjoying access to a rich array of resort amenities. Whether you prefer a refreshing dip in the pool, an active morning at the gym, or lively indoor and outdoor games - such as cricket, football, badminton, carrom, and Ludo - there is never a dull moment. Beyond recreation, The Sanihara offers unique experiential touches, including evening campfires with music, curate romantic candlelight dinners, authentic dining at our restaurant, and hassle-free local sightseeing tours to complete your ideal holiday.
+                                </p>
                             </div>
                         </div>
 

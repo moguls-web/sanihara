@@ -179,9 +179,8 @@ export default function Suites() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-serif font-bold mb-6">Your Perfect Stay Awaits</h2>
             <p className="text-muted-foreground mb-8">
-              All our suites and villas feature premium amenities including complimentary WiFi, 24-hour room service,
-              luxury toiletries, and breathtaking views of the surrounding rainforest. Check-in time is 2:00 PM and
-              check-out is 12:00 PM.
+            Every room is thoughtfully appointed with premium amenities to ensure a relaxing stay, including complimentary Wi-Fi, dedicated housekeeping services, and Standard toiletries. For your convenience, our standard check-in time is 2:00 PM, and check-out is at 12:00 PM.
+
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
