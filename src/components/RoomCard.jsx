@@ -5,18 +5,48 @@ import Image from "next/image";
 import { Users, Maximize } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-const RoomCard = ({ id, name, subheading, description, image, price, capacity, size, amenities }) => {
+const RoomCard = ({ id, name, subheading, description, image, slides, price, capacity, size, amenities }) => {
+  const images = slides?.length ? slides : image ? [image] : [];
+
   return (
     <Card className="group overflow-hidden hover:shadow-hover transition-all duration-300 hover:-translate-y-2">
       <div className="relative h-64 overflow-hidden">
-        <Image
-          src={image}
-          alt={name}
-          fill
-          className="object-cover group-hover:scale-110 transition-transform duration-500"
-        />
-        <div className="absolute top-4 right-4 bg-brand text-brand-foreground px-4 py-2 rounded-full font-semibold">
+        {images.length > 1 ? (
+          <Carousel opts={{ align: "start", loop: true }} autoScrollMs={3200} className="h-full">
+            <CarouselContent className="ml-0 h-full">
+              {images.map((slide, slideIndex) => (
+                <CarouselItem key={`${name}-${slideIndex}`} className="pl-0 h-full">
+                  <div className="relative h-64">
+                    <Image
+                      src={slide}
+                      alt={`${name} image ${slideIndex + 1}`}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-3 top-1/2 -translate-y-1/2 z-10 h-8 w-8 bg-black/40 border-white/30 text-white hover:bg-black/60" />
+            <CarouselNext className="absolute right-3 top-1/2 -translate-y-1/2 z-10 h-8 w-8 bg-black/40 border-white/30 text-white hover:bg-black/60" />
+          </Carousel>
+        ) : images.length === 1 ? (
+          <Image
+            src={images[0]}
+            alt={name}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        ) : null}
+        <div className="absolute top-4 right-4 z-10 bg-brand text-brand-foreground px-4 py-2 rounded-full font-semibold text-sm">
           ₹{price.toLocaleString()}/night
         </div>
       </div>

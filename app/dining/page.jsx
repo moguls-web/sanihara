@@ -12,14 +12,8 @@ export default function Dining() {
         "The restaurant boasts 60 indoor seats, providing a versatile dining environment perfect for families, corporate guests, and group travelers. Additionally, a spacious outdoor area accommodates 30 more guests, offering a relaxed atmosphere for intimate gatherings and curated dining experiences.",
         "Our menu features a curated selection of Indian, Continental, and international cuisines, with a strong focus on North Indian specialties. Each dish is crafted using authentic recipes, premium ingredients, and traditional cooking techniques, ensuring a memorable dining experience with every bite.",
         "Sofy’s Restaurant is the perfect choice for a wholesome breakfast, business lunch, or a leisurely dinner, where attentive service and a commitment to excellence come together to offer an unforgettable dining experience.",
-      ],
-      highlights: [
-        "A diverse menu with a focus on North Indian cuisine",
-        "60 indoor dining covers",
-        "Additional outdoor seating for 30 guests",
-        "Ideal for families, corporate gatherings, and groups",
-        "Emphasis on quality, hygiene, and guest satisfaction",
-      ],
+        "Offering a diverse menu with a special focus on North Indian cuisine, the restaurant features 60 indoor dining covers along with outdoor seating for an additional 30 guests. It is an ideal setting for families, corporate gatherings, and groups, with a strong emphasis on quality, hygiene, and guest satisfaction.",
+      ], 
     },
     {
       heading: "In-Room Dining – The Sanihara",
@@ -28,14 +22,9 @@ export default function Dining() {
         "Our curated menu includes a selection of Indian, Continental, and international dishes, including our signature North Indian specialties. Just like Sofy’s Restaurant, every meal is freshly prepared with premium ingredients to ensure consistency and quality.",
         "Available throughout the day, our In-Room Dining service offers everything from hearty breakfasts and light snacks to complete meals, all delivered promptly with personalized attention.",
         "In-Room Dining at The Sanihara brings a restaurant-quality experience to the tranquility of your room, combining luxury, comfort, and culinary excellence.",
-      ],
-      highlights: [
-        "A curated multi-cuisine menu available in-room",
-        "Signature North Indian dishes",
-        "Freshly prepared meals with a focus on quality and hygiene",
-        "Prompt, efficient, and discreet service",
-        "Ideal for privacy, convenience, and comfort",
-      ],
+        "Guests can enjoy a curated multi-cuisine menu in the comfort of their room, featuring signature North Indian dishes and freshly prepared meals with a strong focus on quality and hygiene. Prompt, efficient, and discreet service ensures a seamless dining experience, making it ideal for those seeking privacy, convenience, and comfort.",
+
+      ], 
     },
   ];
 
@@ -78,14 +67,7 @@ export default function Dining() {
                       {paragraph}
                     </p>
                   ))}
-                  <div className="pt-1">
-                    <h3 className="text-xl font-semibold mb-3">Key Highlights:</h3>
-                    <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                      {section.highlights.map((highlight) => (
-                        <li key={highlight}>{highlight}</li>
-                      ))}
-                    </ul>
-                  </div>
+                   
                 </div>
               </div>
             ))}

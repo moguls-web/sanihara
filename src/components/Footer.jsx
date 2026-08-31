@@ -8,9 +8,9 @@ import { Input } from "@/components/ui/input";
 
 const defaultContact = {
   address: "8/468A Lakkidi, Wayanad, Kerala 673576 – India",
-  phone: "+91-1234567890",
-  phoneHref: "tel:+911234567890",
-  email: "info@thesanihara.com",
+  phone: "+91 8547296999",
+  phoneHref: "tel:+918547296999",
+  email: "reservations@thesanihara.com",
   workingHours: "24/7 Reception",
 };
 
@@ -41,9 +41,9 @@ const hotelContacts = {
   },
   "/hotels/the-sanihara-hotel-resort": {
     address: "8/468A Lakkidi, Wayanad, Kerala 673576 – India",
-    phone: "+91-1234567890",
-    phoneHref: "tel:+911234567890",
-    email: "info@thesanihara.com",
+    phone: "+91 8547296999",
+    phoneHref: "tel:+918547296999",
+    email: "reservations@thesanihara.com",
     workingHours: "24/7 Reception",
     footerAbout: "A sanctuary above the clouds. Escape to the pristine rainforests and misty hilltops of Wayanad, Kerala — where luxury meets nature, and every moment is a memory in the making.",
   },

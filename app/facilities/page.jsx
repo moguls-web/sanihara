@@ -1,31 +1,11 @@
 "use client";
 
-import { Waves, Sparkles, Dumbbell, Baby, Briefcase, Car, Wifi, Coffee, Heart, Plane } from "lucide-react";
+import { Waves, Sparkles, Dumbbell, Baby, Briefcase, Car, Wifi, Coffee, Heart } from "lucide-react";
 import Image from "next/image";
 import poolImage from "@/assets/pool-infinity.jpg";
 
 export default function Facilities() {
   const facilities = [
-    {
-      icon: Sparkles,
-      name: "Recreation & Wellness – The Sanihara",
-      description:
-        "At The Sanihara, we offer a thoughtfully curated selection of recreational and wellness facilities, ensuring a well-balanced stay that combines relaxation, fitness, and leisure for guests of all ages.",
-      details: ["Curated Leisure Facilities", "Wellness Experiences", "Family-Friendly Spaces", "Balanced Stay"],
-      hours: "All Day",
-      charge: "Included for Guests",
-      image: poolImage,
-    },
-    {
-      icon: Sparkles,
-      name: "Ayurveda Treatment & Wellness Center",
-      description:
-        "Indulge in holistic rejuvenation with traditional Ayurvedic therapies designed to restore balance and enhance well-being. Our wellness center provides a variety of treatments performed by trained professionals in a serene and therapeutic environment.",
-      details: ["Traditional Ayurvedic Therapies", "Professional Therapists", "Holistic Rejuvenation", "Serene Ambience"],
-      hours: "9:00 AM - 9:00 PM",
-      charge: "Charges Apply",
-      image: poolImage,
-    },
     {
       icon: Waves,
       name: "Swimming Pool",
@@ -37,22 +17,22 @@ export default function Facilities() {
       image: poolImage,
     },
     {
-      icon: Dumbbell,
-      name: "Gymnasium",
-      description:
-        "Stay on track with your fitness routine in our fully equipped gymnasium. Designed to accommodate a wide range of workouts, it provides a comfortable and functional space for all your fitness needs.",
-      details: ["Fully Equipped Gym", "Workout Flexibility", "Functional Fitness Space", "Comfortable Environment"],
-      hours: "6:00 AM - 10:00 PM",
-      charge: "Complimentary",
-      image: poolImage,
-    },
-    {
       icon: Baby,
       name: "Children’s Playground",
       description:
         "Our dedicated outdoor play area offers younger guests a safe and engaging space to enjoy recreational activities, making it the perfect spot for families to spend time together.",
       details: ["Safe Outdoor Play Area", "Family-Friendly Zone", "Engaging Activities", "Ideal for Kids"],
       hours: "8:00 AM - 8:00 PM",
+      charge: "Complimentary",
+      image: poolImage,
+    },
+    {
+      icon: Dumbbell,
+      name: "Gymnasium",
+      description:
+        "Stay on track with your fitness routine in our fully equipped gymnasium. Designed to accommodate a wide range of workouts, it provides a comfortable and functional space for all your fitness needs.",
+      details: ["Fully Equipped Gym", "Workout Flexibility", "Functional Fitness Space", "Comfortable Environment"],
+      hours: "6:00 AM - 10:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
@@ -117,13 +97,23 @@ export default function Facilities() {
       image: poolImage,
     },
     {
-      icon: Plane,
-      name: "Large Outdoor Garden",
+      icon: Sparkles,
+      name: "Recreation & Wellness – The Sanihara",
       description:
-        "Our expansive, well-maintained garden provides a beautiful and serene space for relaxation, leisurely walks, and outdoor gatherings.",
-      details: ["Expansive Green Space", "Leisure Walks", "Outdoor Gatherings", "Serene Environment"],
+        "At The Sanihara, we offer a thoughtfully curated selection of recreational and wellness facilities, ensuring a well-balanced stay that combines relaxation, fitness, and leisure for guests of all ages.",
+      details: ["Curated Leisure Facilities", "Wellness Experiences", "Family-Friendly Spaces", "Balanced Stay"],
       hours: "All Day",
-      charge: "Complimentary",
+      charge: "Included for Guests",
+      image: poolImage,
+    },
+    {
+      icon: Sparkles,
+      name: "Ayurveda Treatment & Wellness Center",
+      description:
+        "Indulge in holistic rejuvenation with traditional Ayurvedic therapies designed to restore balance and enhance well-being. Our wellness center provides a variety of treatments performed by trained professionals in a serene and therapeutic environment.",
+      details: ["Traditional Ayurvedic Therapies", "Professional Therapists", "Holistic Rejuvenation", "Serene Ambience"],
+      hours: "9:00 AM - 9:00 PM",
+      charge: "Charges Apply",
       image: poolImage,
     },
   ];

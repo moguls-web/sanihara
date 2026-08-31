@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -153,20 +153,40 @@ export default function Contact() {
                       <Phone className="h-6 w-6 text-brand" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Phone</h3>
-                      <a href="tel:+911234567890" className="text-muted-foreground hover:text-brand">
-                        +91-1234567890
+                      <h3 className="font-semibold mb-1">Reservation Contact</h3>
+                      <a href="tel:+918547296999" className="text-muted-foreground hover:text-brand block">
+                        +91 8547296999
+                      </a>
+                      <a href="mailto:reservations@thesanihara.com" className="text-muted-foreground hover:text-brand block mt-1">
+                        reservations@thesanihara.com
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-6 w-6 text-brand" />
+                      <Phone className="h-6 w-6 text-brand" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Email</h3>
-                      <a href="mailto:info@thesanihara.com" className="text-muted-foreground hover:text-brand">
-                        info@thesanihara.com
+                      <h3 className="font-semibold mb-1">Sales Manager Contact</h3>
+                      <a href="tel:+919446105699" className="text-muted-foreground hover:text-brand block">
+                        +91 9446105699
+                      </a>
+                      <a href="tel:+919562941483" className="text-muted-foreground hover:text-brand block mt-1">
+                        +91 9562941483
+                      </a>
+                      <a href="mailto:sm@thesanihara.com" className="text-muted-foreground hover:text-brand block mt-1">
+                        sm@thesanihara.com
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0">
+                      <Phone className="h-6 w-6 text-brand" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">Reception</h3>
+                      <a href="tel:+919446108699" className="text-muted-foreground hover:text-brand">
+                        +91 9446108699
                       </a>
                     </div>
                   </div>

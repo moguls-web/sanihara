@@ -99,9 +99,9 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+911234567890" className="flex items-center space-x-2 text-foreground/80 hover:text-foreground transition-colors">
+            <a href="tel:+918547296999" className="flex items-center space-x-2 text-foreground/80 hover:text-foreground transition-colors">
               <Phone className="h-4 w-4" />
-              <span className="text-sm font-light">+91-123-456-7890</span>
+              <span className="text-sm font-light">+918547296999</span>
             </a>
             <Button variant="brand" size="default">
               Reserve
@@ -165,11 +165,11 @@ const Navbar = () => {
             ))}
             <div className="pt-4 space-y-3">
               <a
-                href="tel:+911234567890"
+                href="tel:+918547296999"
                 className="flex items-center space-x-2 px-4 py-2 text-foreground/80 hover:text-foreground"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">+91-123-456-7890</span>
+                <span className="text-sm">+918547296999</span>
               </a>
               <Button variant="brand" size="default" className="w-full">
                 Reserve

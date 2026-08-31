@@ -4,6 +4,8 @@ import heroImage from "@/assets/hero-resort.jpg";
 import suiteImage from "@/assets/suite-luxury.jpg";
 import poolImage from "@/assets/pool-infinity.jpg";
 import diningImage from "@/assets/dining-restaurant.jpg";
+import RoomCard from "@/components/RoomCard";
+import { roomCategories, getRoomSlides } from "@/data/sanihara-rooms";
 import {
     Carousel,
     CarouselContent,
@@ -33,120 +35,6 @@ export const metadata = {
     description:
         "Stay at The Sanihara Hotel & Resort in Lakkidi, Wayanad — a premium rainforest retreat with elegant rooms, Sofy's Restaurant, pool, wellness facilities, and unforgettable Kerala hospitality.",
 };
-
-const roomCategories = [
-    {
-        title: "Twin Room (Non Air-Conditioned)",
-        description:
-            "Ideal for friends, colleagues, and travelers who prefer separate sleeping arrangements. A comfortable and affordable stay surrounded by the natural beauty of Wayanad.",
-        details: [
-            "Occupancy: 2 Guests",
-            "Size: 26 sq. m (280 sq. ft)",
-            "Bed Type: 2 Large Single Beds",
-            "Bathroom: Attached",
-            "Air Conditioning: Non Air-Conditioned", 
-        ],
-    },
-    {
-        title: "Double Room (Non Air-Conditioned)",
-        description:
-            "A comfortable and affordable choice for couples and solo travelers looking for a relaxing stay surrounded by nature.",
-        details: [
-            "Size: 26 sq. m (280 sq. ft)",
-            "Occupancy: 2 Guests",
-            "Bed Type: 1 Queen Bed",
-            "Bathroom: Attached",
-            "Air Conditioning: Non Air-Conditioned", 
-        ],
-    },
-    {
-        title: "Triple Room (Non Air-Conditioned)",
-        description:
-            "Perfect for small families, friends, colleagues, bikers, and hikers — offering comfortable accommodation for up to three guests.",
-        details: [ 
-            "Size: 26 sq. m (280 sq. ft)",
-            "Occupancy: 3 Guests",
-            "Bed Type: 1 Queen Bed + 1 Large Single Bed",
-            "Bathroom: Attached",
-            "Air Conditioning: Non Air-Conditioned",
-        ],
-    },
-    {
-        title: "Family 4-Sharing Room (Non Air-Conditioned)",
-        description:
-            "Designed for families and small groups, these spacious rooms offer the ideal balance of comfort and convenience for a memorable stay.",
-        details: [
-            "Size: 48 sq. m (516 sq. ft)",
-            "Occupancy: 4 Guests",
-            "Bed Type: 1 Queen Bed + 2 Large Single Beds",
-            "Bathroom: Attached",
-            "Air Conditioning: Non Air-Conditioned",
-        ],
-    },
-    {
-        title: "Large Family 6-Sharing Room (Non Air-Conditioned)",
-        description:
-            "An excellent choice for larger families and groups wishing to stay together, offering generous space and comfort without compromise.",
-        details: [
-            "Size: 72 sq. m (775 sq. ft)",
-            "Occupancy: 6 Guests",
-            "Bed Type: 2 Queen Beds + 2 Large Single Beds",
-            "Bathroom: Attached",
-            "Air Conditioning: Non Air-Conditioned",
-        ],
-    },
-    {
-        title: "Classic Twin Room (Air-Conditioned)",
-        description:
-            "A comfortable air-conditioned room featuring twin beds, ideal for friends, colleagues, or family members traveling together.",
-        details: [
-            "Size: 25 sq. m (269 sq. ft)",
-            "Occupancy: 2 Guests",
-            "Bed Type: 2 Single Beds",
-            "Bathroom: Attached",
-            "Air Conditioning: Air-Conditioned",
-
-        ],
-    },
-    {
-        title: "Classic Double Room (Air-Conditioned)",
-        description:
-            "Enjoy enhanced comfort with air-conditioning and modern amenities. Perfect for couples seeking a relaxing and refreshing stay in Wayanad.",
-        details: [
-            "Size: 25 sq. m (269 sq. ft)",
-            "Occupancy: 2 Guests",
-            "Bed Type: 1 Queen Bed",
-            "Bathroom: Attached",
-            "Air Conditioning: Air-Conditioned", 
-        ],
-    },
-    {
-        title: "Royal Classic Twin Room (Air-Conditioned)",
-        description:
-            "Combining comfort, style, and convenience, this premium room category features twin bedding alongside serene views of The Sanihara's landscaped gardens.",
-        details: [
-            " Size: 25 sq. m (269 sq. ft)",
-            "Occupancy: 2 Guests",
-            "Bed Type: 2 Single Beds",
-            "View: Garden View",
-            "Bathroom: Attached",
-            "Air Conditioning: Air-Conditioned",
-        ],
-    },
-    {
-        title: "Royal Classic Double Room (Air-Conditioned)",
-        description:
-            "Experience elevated comfort and elegance with beautiful views of The Sanihara's lush green gardens. Thoughtfully designed for a relaxing and memorable stay.",
-        details: [
-            "Size: 25 sq. m (269 sq. ft)",
-            "Occupancy: 2 Guests",
-            "Bed Type: 1 Queen Bed",
-            "View: Garden View",
-            "Bathroom: Attached",
-            "Air Conditioning: Air-Conditioned",
-        ],
-    },
-];
 
 const highlights = [
     {
@@ -217,22 +105,6 @@ const highlights = [
         ],
     },
 ];
-
-const roomSlides = [suiteImage, poolImage, diningImage];
-const acRoomSlides = [poolImage, suiteImage, diningImage];
-const gardenViewSlides = [suiteImage, diningImage, poolImage];
-
-const roomSlidesByTitle = {
-    "Double - Non AC": roomSlides,
-    "Twin - Non AC": roomSlides,
-    "Triple – Non AC": roomSlides,
-    "Family 4-sharing – Non AC": roomSlides,
-    "Large Family 6-sharing – Non AC": roomSlides,
-    "Classic Double – AC": acRoomSlides,
-    "Classic Twin – AC": acRoomSlides,
-    "Classic Double Garden View – AC": gardenViewSlides,
-    "Classic Twin Garden View – AC": gardenViewSlides,
-};
 
 const introSlides = [
     freeImages.introOne,
@@ -446,54 +318,13 @@ Our hotel features well-furnished rooms designed for couples, families, groups, 
                             Discover the different room categories and stay experience at The Sanihara Hotel &amp; Resort
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                         {roomCategories.map((room) => (
-                            <article
-                                key={room.title}
-                                className="bg-background border border-border rounded-xl overflow-hidden"
-                            >
-                                <div className="relative h-80">
-                                    <Carousel
-                                        opts={{ align: "start", loop: true }}
-                                        autoScrollMs={3200}
-                                        className="h-full"
-                                    >
-                                        <CarouselContent className="ml-0 h-full">
-                                            {(roomSlidesByTitle[room.title] || roomSlides).map((slide, slideIndex) => (
-                                                <CarouselItem key={`${room.title}-${slideIndex}`} className="pl-0 h-full">
-                                                    <div className="relative h-80">
-                                                        <Image
-                                                            src={slide}
-                                                            alt={`${room.title} image ${slideIndex + 1}`}
-                                                            fill
-                                                            className="object-cover"
-                                                        />
-                                                    </div>
-                                                </CarouselItem>
-                                            ))}
-                                        </CarouselContent>
-                                        <div className="absolute bottom-0 left-0 right-0 flex justify-between px-4">
-                                            <CarouselPrevious className="left-3 top-1/2 -translate-y-1/2 h-8 w-8 bg-black/40 border-white/30 text-white hover:bg-black/60" />
-                                            <CarouselNext className="right-3 top-1/2 -translate-y-1/2 h-8 w-8 bg-black/40 border-white/30 text-white hover:bg-black/60" />
-                                        </div>
-                                    </Carousel>
-                                </div>
-                                <div className="p-6">
-                                    <h3 className="text-xl md:text-2xl font-semibold mb-3">{room.title}</h3>
-                                    <p className="text-foreground/85 leading-relaxed mb-3">{room.description}</p>
-                                    <ul className="list-disc pl-6 text-foreground/85 space-y-1">
-                                        {room.details.map((item) => (
-                                            <li key={item}>{item}</li>
-                                        ))}
-                                    </ul>
-                                    <button
-                                        type="button"
-                                        className="mt-5 px-5 py-2 rounded-full bg-[#f58220] text-white text-sm font-medium hover:bg-[#df741a] transition-colors"
-                                    >
-                                        Book Now
-                                    </button>
-                                </div>
-                            </article>
+                            <RoomCard
+                                key={room.id}
+                                {...room}
+                                slides={getRoomSlides(room.id)}
+                            />
                         ))}
                     </div>
                 </div>
