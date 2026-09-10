@@ -17,8 +17,8 @@ const RoomCard = ({ id, name, subheading, description, image, slides, price, cap
   const images = slides?.length ? slides : image ? [image] : [];
 
   return (
-    <Card className="group overflow-hidden hover:shadow-hover transition-all duration-300 hover:-translate-y-2">
-      <div className="relative h-64 overflow-hidden">
+    <Card className="group h-full flex flex-col overflow-hidden hover:shadow-hover transition-all duration-300 hover:-translate-y-2">
+      <div className="relative h-64 shrink-0 overflow-hidden">
         {images.length > 1 ? (
           <Carousel opts={{ align: "start", loop: true }} autoScrollMs={3200} className="h-full">
             <CarouselContent className="ml-0 h-full">
@@ -50,10 +50,10 @@ const RoomCard = ({ id, name, subheading, description, image, slides, price, cap
           ₹{price.toLocaleString()}/night
         </div>
       </div>
-      <CardContent className="p-6">
+      <CardContent className="p-6 flex-1 flex flex-col">
         <h3 className="text-2xl font-serif font-semibold mb-2">{name}</h3>
         {subheading && <p className="text-sm font-bold text-brand pb-5">{subheading}</p>}
-        <p className="text-muted-foreground mb-4">{description}</p>
+        <p className="text-muted-foreground mb-4 flex-1">{description}</p>
         <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-4">
           <div className="flex items-center space-x-1">
             <Users className="h-4 w-4" />
@@ -73,14 +73,9 @@ const RoomCard = ({ id, name, subheading, description, image, slides, price, cap
               {amenity}
             </span>
           ))}
-          {amenities.length > 3 && (
-            <span className="text-xs text-muted-foreground px-3 py-1">
-              +{amenities.length - 3} more
-            </span>
-          )}
         </div>
       </CardContent>
-      <CardFooter className="p-6 pt-0 flex space-x-3">
+      <CardFooter className="p-6 pt-0 mt-auto flex space-x-3">
         <Button variant="outline" size="default" className="flex-1 text-white" asChild>
           <Link href={`/suites/${id}`}>View Details</Link>
         </Button>

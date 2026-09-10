@@ -21,7 +21,7 @@ export default function Suites() {
       <section className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-4 animate-fade-in-up">
-            Suites & Villas
+            Rooms
           </h1>
           <p className="text-xl md:text-2xl opacity-90 animate-fade-in">
             Elevated stays amidst the rainforest of Wayanad

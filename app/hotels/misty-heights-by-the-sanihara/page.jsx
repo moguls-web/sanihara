@@ -2,6 +2,7 @@ import Image from "next/image";
 import suiteImage from "@/assets/suite-luxury.jpg";
 import poolImage from "@/assets/pool-infinity.jpg";
 import diningImage from "@/assets/dining-restaurant.jpg";
+import RoomCard from "@/components/RoomCard";
 import {
     Carousel,
     CarouselContent,
@@ -41,84 +42,88 @@ export const metadata = {
 
 const roomCategories = [
     {
-        title: "Heritage Room (Non Air-Conditioned)",
+        id: "heritageRoomNonAC",
+        name: "Heritage (Non-Air-Conditioned)",
+        subheading: "Traditional Charm in a Spacious Retreat",
         description:
             "Perfect for guests who appreciate simplicity and traditional charm, the Heritage Room offers a spacious and serene retreat within the bungalow setting. With a dedicated living area and classic interiors inspired by heritage architecture, this room ensures a peaceful and relaxing stay.",
-        details: [
-            "Size: 36 sq. m (390 sq. ft)",
-            "Occupancy: 2 Adults",
-            "Bed Type: 1 King-Size Bed",
-            "View: Off View",
-            "Bathroom: Attached",
-            "Location: Heritage Bungalow",
-        ],
+        image: suiteImage,
+        price: 8500,
+        capacity: 2,
+        size: 390,
+        amenities: ["1 King-Size Bed", "Off View", "Attached Bathroom", "Heritage Bungalow"],
     },
     {
-        title: "Deluxe Room (Non Air-Conditioned)",
+        id: "heritageGardenViewNonAC",
+        name: "Heritage Garden View (Non Air-Conditioned)",
+        subheading: "Elegant Comfort with Garden Views",
         description:
-            "Blending elegance with comfort, the Deluxe Room features soothing interiors and a refreshing garden view. it also includes a comfortable living area within the bungalow.",
-        details: [
-            "Size: 36 sq. m (390 sq. ft)",
-            "Occupancy: 2 Adults (Maximum 4 Guests)",
-            "Bed Type: 1 King Size Bed",
-            "View: Garden View",
-            "Bathroom: Attached",
-            "Location: Heritage Bungalow",
-        ],
+            "Blending elegance with comfort, the heritage garden view room features soothing interiors and a refreshing garden view. Designed for guests seeking a calm and cozy atmosphere, it also includes a comfortable living area within the room.",
+        image: suiteImage,
+        price: 9500,
+        capacity: 2,
+        size: 390,
+        amenities: ["1 Queen-Size Bed", "Garden View", "Attached Bathroom", "Heritage Bungalow"],
     },
     {
-        title: "Superior Heritage Room (Non Air-Conditioned)",
+        id: "superiorHeritageRoomNonAC",
+        name: "Superior Heritage (Non-Air-Conditioned)",
+        subheading: "Traditional Design with Lasting Comfort",
         description:
-            "Offering one of the most scenic experiences on the property, the Superior Heritage Room combines traditional design with breathtaking views of Chembra Peak.",
-        details: [
-            "Size: 36 sq. m (390 sq. ft)",
-            "Occupancy: 2 Adults (Maximum 4 Guests)",
-            "Bed Type: 1 King Size Bed",
-            "View: Mountain View (Chembra Peak)",
-            "Bathroom: Attached",
-            "Location: Heritage Bungalow",
-        ],
+            "Is the Superior Heritage Room traditional design this room delivers both comfort and an unforgettable visual experience.",
+        image: suiteImage,
+        price: 11000,
+        capacity: 2,
+        size: 280,
+        amenities: ["1 King-Size Bed", "Off View", "Attached Bathroom, Bath tub", "Heritage Bungalow"],
     },
     {
-        title: "Family Room - 4 Sharing (Detached Bathroom)",
+        id: "superiorHeritageMountainViewNonAC",
+        name: "Superior Heritage Mountain View (Non Air-Conditioned)",
+        subheading: "Scenic Views of Chembra Peak",
         description:
-            "Designed for families and small groups, this spacious room offers stunning direct views of Chembra Peak along with a private balcony and a detached bathroom facility.",
-        details: [
-            "Size: 44 sq. m (476 sq. ft)",
-            "Occupancy: 4 Adults (Maximum 5 Guests)",
-            "Bed Type: 1 Queen Bed + 2 Super Single Beds",
-            "View: Mountain View (Chembra Peak)",
-            "Bathroom: Detached",
-            "Features: Private Balcony",
-            "Location: Modern Building",
-        ],
+            "Offering one of the most scenic experiences on the property, the Superior Heritage Room combines traditional design with breathtaking views of Chembra Peak. Ideal for nature lovers, this room delivers both comfort and an unforgettable visual experience.",
+        image: suiteImage,
+        price: 15000,
+        capacity: 2,
+        size: 390,
+        amenities: ["1 King-Size Bed", "Mountain View (Chembra Peak)", "Attached Bathroom, Bath tub", "Heritage Bungalow"],
     },
     {
-        title: "Family Room - 4 Sharing (Attached Bathroom)",
+        id: "familyRoom4SharingDetached",
+        name: "Family Room - 4 Sharing Detached Bath (Non Air-Conditioned)",
+        subheading: "Spacious Family Stay with Mountain Views",
         description:
-            "A more premium family option, this category offers the same spacious layout with the added convenience of an attached bathroom.",
-        details: [
-            "Size: 44 sq. m (476 sq. ft)",
-            "Occupancy: 4 Adults (Maximum 5 Guests)",
-            "Bed Type: 1 Queen Bed + 2 Super Single Beds",
-            "View: Mountain View (Chembra Peak)",
-            "Bathroom: Attached",
-            "Features: Private Balcony",
-            "Location: Modern Building",
-        ],
+            "Designed for families and small groups, this spacious room offers stunning direct views of Chembra Peak along with a private balcony. It provides a comfortable and budget-friendly option with a detached bathroom facility.",
+        image: suiteImage,
+        price: 16000,
+        capacity: 4,
+        size: 476,
+        amenities: ["1 Queen Bed + 2 Super Single Beds", "Mountain View (Chembra Peak)", "Detached Bathroom", "Private Balcony", "Modern Building"],
     },
     {
-        title: "Premium Dormitory - 12 Sharing (Non Air-Conditioned)",
+        id: "familyRoom4SharingAttached",
+        name: "Family Room - 4 Sharing (Non Air-Conditioned)",
+        subheading: "Premium Family Comfort with Balcony",
         description:
-            "deal for larger groups, corporate retreats, and backpackers, the Premium Dormitory offers a spacious and Wayanad budget resorts with pool and group-friendly accommodations option without compromising on comfort.",
-        details: [
-            "Occupancy: 12 Guests (Maximum 14 Guests)",
-            "Size: 78 sq. m (836 sq. ft)",
-            "Bed Type: 12 Single Beds",
-            "View: Limited / Off View",
-            "Bathroom: Attached",
-            "Location: Modern Building",
-        ],
+            "A more premium family option, this category offers the same spacious layout with the added convenience of an attached bathroom. Guests can enjoy uninterrupted panoramic views of Chembra Peak right from the room and balcony.",
+        image: suiteImage,
+        price: 12000,
+        capacity: 4,
+        size: 476,
+        amenities: ["1 Queen Bed + 2 Super Single Beds", "Mountain View (Chembra Peak)", "Attached Bathroom", "Private Balcony", "Modern Building"],
+    },
+    {
+        id: "premiumDormitory12Sharing",
+        name: "Premium Dormitory - 12 Sharing (Non-Air-Conditioned)",
+        subheading: "Ideal for Groups and Corporate Retreats",
+        description:
+            "Ideal for larger groups, corporate retreats, and backpackers, the Premium Dormitory offers a spacious and budget-friendly accommodation option without compromising on comfort. Designed to accommodate group stays efficiently, it ensures a social and lively experience.",
+        image: suiteImage,
+        price: 12000,
+        capacity: 12,
+        size: 836,
+        amenities: ["12 Single Beds", "Limited / Off View", "Attached Bathroom", "Modern Building"],
     },
 ];
 
@@ -229,13 +234,15 @@ const premiumDormitorySlides = [
     "/rooms/Premium-Dormitory/6.JPG",
 ];
 
-const roomSlidesByTitle = {
-    "Heritage Room (Non Air-Conditioned)": superiorHeritageRoomSlides,
-    "Superior Heritage Room (Non Air-Conditioned)": superiorHeritageRoomSlides,
-    "Deluxe Room (Non Air-Conditioned)": deluxeRoomSlides,
-    "Family Room - 4 Sharing (Attached Bathroom)": familyAttachedRoomSlides,
-    "Family Room - 4 Sharing (Detached Bathroom)": familyDetachedRoomSlides,
-    "Premium Dormitory - 12 Sharing (Non Air-Conditioned)": premiumDormitorySlides,
+const roomSlidesById = {
+    heritageRoomNonAC: superiorHeritageRoomSlides,
+    superiorHeritageRoomNonAC: superiorHeritageRoomSlides,
+    superiorHeritageMountainViewNonAC: superiorHeritageRoomSlides,
+    heritageGardenViewNonAC: deluxeRoomSlides,
+    deluxeRoomNonAC: deluxeRoomSlides,
+    familyRoom4SharingAttached: familyAttachedRoomSlides,
+    familyRoom4SharingDetached: familyDetachedRoomSlides,
+    premiumDormitory12Sharing: premiumDormitorySlides,
 };
 
 const introSlides = [
@@ -288,11 +295,11 @@ export default function MistyHeightsPage() {
                             <div className="space-y-4 text-base md:text-lg text-foreground/85 leading-relaxed">
                                 <p>Escape into the misty landscapes of Wayanad at Misty Heights by The Sanihara a heritage retreat nestled in the heart of Old Vythiri. Surrounded by lush rainforests and serene hills, this premium stay blends timeless charm with modern comfort, making it one of the most peaceful places to stay in Vythiri.</p>
                                 <p>Thoughtfully designed for couples, families, and groups, Misty Heights offers a blend of heritage charm and modern comfort. The property features a beautifully restored heritage bungalow with six spacious and elegantly appointed rooms, alongside expansive mountain-view family rooms and shared accommodations perfect for larger gatherings. For private events and group stays, the entire property can be exclusively reserved, accommodating up to 70 guests.</p>
-                                <p>The stay experience is uniquely divided across two distinct spaces:</p>
+                                {/* <p>The stay experience is uniquely divided across two distinct spaces:</p>
                                 <ul className="list-disc pl-6 space-y-2">
                                     <li><strong>Heritage Bungalow:</strong> A six-bedroom traditional structure featuring the Heritage Room, Heritage Garden View Room, Superior Heritage Room, and Superior Heritage Mountain View Room — each showcasing timeless architecture and distinctive interiors inspired by Kerala's rich heritage.</li>
                                     <li><strong>Modern Wing:</strong> A contemporary building offering well-appointed Family Rooms and a Premium Dormitory, thoughtfully designed for comfort, convenience, and group stays.</li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div>
 
@@ -325,8 +332,8 @@ export default function MistyHeightsPage() {
                                         </CarouselItem>
                                     ))}
                                 </CarouselContent>
-                                <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2 bg-black/40 border-white/40 text-white hover:bg-black/60" />
-                                <CarouselNext className="right-4 top-1/2 -translate-y-1/2 bg-black/40 border-white/40 text-white hover:bg-black/60" />
+                                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/40 border-white/40 text-white hover:bg-black/60" />
+                                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/40 border-white/40 text-white hover:bg-black/60" />
                             </Carousel>
                         </div>
                     </div>
@@ -344,56 +351,29 @@ export default function MistyHeightsPage() {
                             Discover the different room categories and stay experience at Misty Heights by The Sanihara
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                        {roomCategories.map((room, index) => (
-                            <article
-                                key={room.title}
-                                className="bg-background border border-border rounded-xl overflow-hidden"
-                            >
-                                <div className="relative h-80">
-                                    <Carousel
-                                        opts={{ align: "start", loop: true }}
-                                        autoScrollMs={3200}
-                                        className="h-full"
-                                    >
-                                        <CarouselContent className="ml-0 h-full">
-                                            {(roomSlidesByTitle[room.title] || roomSlides).map((slide, slideIndex) => (
-                                                <CarouselItem key={`${room.title}-${slideIndex}`} className="pl-0 h-full">
-                                                    <div className="relative h-80">
-                                                        <Image
-                                                            src={slide}
-                                                            alt={`${room.title} image ${slideIndex + 1}`}
-                                                            fill
-                                                            className="object-cover"
-                                                        />
-                                                    </div>
-                                                </CarouselItem>
-                                            ))}
-                                        </CarouselContent>
-                                        <div className="absolute bottom-0 left-0 right-0 flex justify-between px-4">
-                                            <CarouselPrevious className="left-3 top-1/2 -translate-y-1/2 h-8 w-8 bg-black/40 border-white/30 text-white hover:bg-black/60" />
-                                            <CarouselNext className="right-3 top-1/2 -translate-y-1/2 h-8 w-8 bg-black/40 border-white/30 text-white hover:bg-black/60" />
-                                        </div>
-                                    </Carousel>
-                                </div>
-                                <div className="p-6">
-                                    <h3 className="text-xl md:text-2xl font-semibold mb-3">{room.title}</h3>
-                                    <p className="text-foreground/85 leading-relaxed mb-3">{room.description}</p>
-                                    <ul className="list-disc pl-6 text-foreground/85 space-y-1">
-                                        {room.details.map((item) => (
-                                            <li key={item}>{item}</li>
-                                        ))}
-                                    </ul>
-                                    <button
-                                        type="button"
-                                        className="mt-5 px-5 py-2 rounded-full bg-[#f58220] text-white text-sm font-medium hover:bg-[#df741a] transition-colors"
-                                    >
-                                        Book Now
-                                    </button>
-                                </div>
-                            </article>
-                        ))}
-                    </div>
+                    <Carousel
+                        opts={{ align: "start", loop: true }}
+                        autoScrollMs={4000}
+                        className="w-full relative px-12 md:px-14"
+                    >
+                        <CarouselContent className="-ml-4 items-stretch">
+                            {roomCategories.map((room) => (
+                                <CarouselItem
+                                    key={room.id}
+                                    className="pl-4 basis-full md:basis-1/2 xl:basis-1/3 h-auto"
+                                >
+                                    <div className="h-full">
+                                        <RoomCard
+                                            {...room}
+                                            slides={roomSlidesById[room.id] || roomSlides}
+                                        />
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-black/40 border-white/40 text-white hover:bg-black/60 hover:text-white" />
+                        <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-black/40 border-white/40 text-white hover:bg-black/60 hover:text-white" />
+                    </Carousel>
                 </div>
             </section>
 

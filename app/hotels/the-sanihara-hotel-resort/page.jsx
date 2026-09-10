@@ -15,17 +15,14 @@ import {
 } from "@/components/ui/carousel";
 
 const freeImages = {
-    hero: heroImage,
-    introOne: suiteImage,
-    introTwo: poolImage,
-    introThree: diningImage,
-    dining: diningImage,
+    hero: "/78562374.webp",
+    introOne: "/ROYAL-CLASSIC-DOUBLE1-room-1.webp",
+    introTwo: "/restorunt6-dine-2.webp",
+    introThree: "/pool2-3.webp",
     pool: "/Swimming-pool.webp",
     deck: "/Panoramic-View-Deck.webp",
-    kids: "/039ac7f6.webp",
     bonfire: "/3271b747.webp",
     nature: "/Environment.webp",
-    gymnasium: "/gymnasium.webp",
     joggingTracks: "/JOGGING-TRACK.webp",
 };
 
@@ -39,7 +36,7 @@ export const metadata = {
 const highlights = [
     {
         title: "Swimming Pool",
-        image: freeImages.pool,
+        image: "/pool2-updated.webp",
         description:
             "Our well-maintained swimming pool provides the perfect setting to unwind and refresh. Surrounded by tropical gardens and open skies, it offers a serene space for relaxation and leisure throughout your stay.",
         bullets: [
@@ -50,7 +47,7 @@ const highlights = [
         },
     {
         title: "Ayurveda Treatment & Wellness Center",
-        image: freeImages.dining,
+        image: "/ayurveda-treatment-wellness-center-updated.webp",
         description:
             "Experience holistic rejuvenation through traditional Ayurvedic therapies designed to restore balance and well-being. Our wellness center offers a curated selection of treatments delivered by trained professionals in a calm and therapeutic environment.",
         bullets: [
@@ -61,7 +58,7 @@ const highlights = [
     },
     {
         title: "Children's Playground",
-        image: freeImages.nature,
+        image: "/childrens-playground-updated.webp",
         description:
             "A dedicated outdoor play area ensures that younger guests have a safe, fun, and engaging space for recreational activities — making The Sanihara an ideal choice for families traveling with children.",
         bullets: [
@@ -83,7 +80,7 @@ const highlights = [
         },
     {
         title: "Gymnasium",
-        image: freeImages.gymnasium,
+        image: "/Gymnasium-updated.webp",
         description:
             "Our fully equipped gymnasium enables guests to maintain their fitness routine with ease throughout their stay. Designed for a range of workouts, the facility provides a comfortable and functional environment for active guests.",
         bullets: [
@@ -94,7 +91,7 @@ const highlights = [
     },
     {
         title: "Outdoor Games & Recreation",
-        image: freeImages.kids,
+        image: "/outdoor-games-recreation-updated.webp",
         description:
             "A spacious outdoor area caters to active guests and group experiences, with a variety of sports and recreational activities available on the property.",
         bullets: [
@@ -115,6 +112,7 @@ const introSlides = [
 const eventVenues = [
     {
         title: "Conference Hall",
+        image: "/confrence-hall-01-updated.webp",
         description:
             "Ideal for corporate meetings, seminars, training sessions, and mid-scale events, the Conference Hall offers a professional setting with adaptable layouts.",
         details: [
@@ -125,6 +123,7 @@ const eventVenues = [
     },
     {
         title: "Mini Conference Hall",
+        image: "/mini-confrence-hall-02-updated.webp",
         description:
             "A perfect setting for smaller meetings, workshops, and private business discussions — offering a focused and efficient environment for intimate corporate engagements.",
         details: [
@@ -135,6 +134,7 @@ const eventVenues = [
     },
     {
         title: "Open Wedding & Event Space",
+        image: "/open-wedding-event-space-03.webp",
         description:
             "An expansive open-air venue designed for grand celebrations — providing a versatile setting for weddings, receptions, and large social events with full flexibility for customized décor, stage setups, and catering.",
         details: [
@@ -350,7 +350,7 @@ Our hotel features well-furnished rooms designed for couples, families, groups, 
                         </div>
                         <div className="relative md:h-[60rem] rounded-xl overflow-hidden">
                             <Image
-                                src={freeImages.dining}
+                                src="/restorunt2.webp"
                                 alt="Sofy's Restaurant at The Sanihara"
                                 fill
                                 className="object-cover"
@@ -414,7 +414,7 @@ Our hotel features well-furnished rooms designed for couples, families, groups, 
                             >
                                 <div className="relative h-64">
                                     <Image
-                                        src={heroImage}
+                                        src={venue.image}
                                         alt={venue.title}
                                         fill
                                         className="object-cover"
