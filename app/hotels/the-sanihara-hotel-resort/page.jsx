@@ -1,9 +1,5 @@
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-resort.jpg";
-import suiteImage from "@/assets/suite-luxury.jpg";
-import poolImage from "@/assets/pool-infinity.jpg";
-import diningImage from "@/assets/dining-restaurant.jpg";
 import RoomCard from "@/components/RoomCard";
 import { roomCategories, getRoomSlides } from "@/data/sanihara-rooms";
 import {
@@ -19,10 +15,7 @@ const freeImages = {
     introOne: "/ROYAL-CLASSIC-DOUBLE1-room-1.webp",
     introTwo: "/restorunt6-dine-2.webp",
     introThree: "/pool2-3.webp",
-    pool: "/Swimming-pool.webp",
-    deck: "/Panoramic-View-Deck.webp",
     bonfire: "/3271b747.webp",
-    nature: "/Environment.webp",
     joggingTracks: "/JOGGING-TRACK.webp",
 };
 
@@ -148,7 +141,7 @@ const eventVenues = [
 const exploreCategories = [
     {
         title: "Nearby Attractions (Within 5 km)",
-        image: heroImage,
+        image: "/nearby-attractions-updated.webp",
         attractions: [
             { name: "Lakkidi View Point", description: "Breathtaking valley views" },
             { name: "Chain Tree", description: "A landmark steeped in local legend" },
@@ -160,7 +153,7 @@ const exploreCategories = [
     },
     {
         title: "Adventure & Recreation (5–10 km)",
-        image: poolImage,
+        image: "/adventure-recreation-updated.webp",
         attractions: [
             { name: "Wayanad Adventure Park", description: "Ziplining and outdoor activities" },
             { name: "Mountain Race Go Karting", description: "Go-kart racing" },
@@ -169,7 +162,7 @@ const exploreCategories = [
     },
     {
         title: "Nature & Scenic Excursions",
-        image: freeImages.nature,
+        image: "/naturescenicexcursions.webp",
         attractions: [
             { name: "Banasura Sagar Dam", description: "The largest earthen dam in India" },
             { name: "Banasura Hill", description: "Ideal for trekking" },
@@ -180,7 +173,7 @@ const exploreCategories = [
     },
     {
         title: "Trekking & Outdoor Experiences",
-        image: freeImages.deck,
+        image: "/trekking-outdoor-experiences.webp",
         attractions: [
             { name: "Chembra Peak", description: "Trekking with a heart-shaped lake" },
             { name: "Soochipara Waterfalls", description: "Popular trekking and waterfall spot" },
@@ -190,7 +183,7 @@ const exploreCategories = [
     },
     {
         title: "Heritage & Culture",
-        image: suiteImage,
+        image: "/heritage-culture.webp",
         attractions: [
             { name: "Edakkal Caves", description: "Prehistoric carvings and history" },
             { name: "Wayanad Heritage Museum", description: "Archaeological and cultural exhibits" },
@@ -199,7 +192,7 @@ const exploreCategories = [
     },
     {
         title: "Wildlife & Eco Tourism",
-        image: freeImages.pool,
+        image: "/wayanad-wildlife-sanctuary.webp",
         attractions: [
             { name: "Wayanad Wildlife Sanctuary", description: "Rich biodiversity and safari experiences" },
             { name: "Kuruva Island", description: "Unique river island ecosystem" },
@@ -208,7 +201,7 @@ const exploreCategories = [
     },
     {
         title: "Spiritual Destinations",
-        image: diningImage,
+        image: "/spiritual-destinations-updated.webp",
         attractions: [
             { name: "Thirunelli Temple", description: "A serene and sacred destination" },
         ],
