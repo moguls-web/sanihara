@@ -12,7 +12,7 @@ export default function Facilities() {
       description:
         "Our pristine swimming pool offers the perfect space to relax and unwind. Whether you’re looking to refresh or simply enjoy some leisure time, this tranquil setting is ideal for all guests.",
       details: ["Pristine Pool Area", "Leisure & Relaxation", "Guest-Friendly Setting", "Family Enjoyment"],
-      hours: "6:00 AM - 10:00 PM",
+      hours: "8:00 AM - 9:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
@@ -22,7 +22,7 @@ export default function Facilities() {
       description:
         "Our dedicated outdoor play area offers younger guests a safe and engaging space to enjoy recreational activities, making it the perfect spot for families to spend time together.",
       details: ["Safe Outdoor Play Area", "Family-Friendly Zone", "Engaging Activities", "Ideal for Kids"],
-      hours: "8:00 AM - 8:00 PM",
+      hours: "8:00 AM - 9:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
@@ -32,7 +32,7 @@ export default function Facilities() {
       description:
         "Stay on track with your fitness routine in our fully equipped gymnasium. Designed to accommodate a wide range of workouts, it provides a comfortable and functional space for all your fitness needs.",
       details: ["Fully Equipped Gym", "Workout Flexibility", "Functional Fitness Space", "Comfortable Environment"],
-      hours: "6:00 AM - 10:00 PM",
+      hours: "7:00 AM - 11:00 AM | 4:00 PM - 10:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
@@ -42,7 +42,7 @@ export default function Facilities() {
       description:
         "Enjoy a variety of indoor games such as table tennis, carrom, chess, and Ludo. This space is designed for relaxation and friendly competition, perfect for families and groups.",
       details: ["Table Tennis", "Carrom & Chess", "Ludo", "Family & Group Fun"],
-      hours: "9:00 AM - 9:00 PM",
+      hours: "8:00 AM - 9:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
@@ -52,7 +52,7 @@ export default function Facilities() {
       description:
         "Our expansive outdoor sports area offers plenty of space for group activities, including basketball, football, cricket, and badminton, ensuring fun and active experiences for all.",
       details: ["Basketball & Football", "Cricket & Badminton", "Group Activities", "Active Experiences"],
-      hours: "6:00 AM - 7:00 PM",
+      hours: "8:00 AM - 9:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
@@ -62,7 +62,7 @@ export default function Facilities() {
       description:
         "Our well-defined jogging track provides a peaceful environment for your morning or evening walks, surrounded by the natural beauty of our property.",
       details: ["Dedicated Track", "Morning & Evening Use", "Nature-Facing Route", "Relaxing Ambience"],
-      hours: "6:00 AM - 8:00 PM",
+      hours: "6:00 AM - 6:00 PM",
       charge: "Complimentary",
       image: poolImage,
     },
@@ -82,7 +82,7 @@ export default function Facilities() {
       description:
         "As the evening sets in, enjoy a curated campfire experience, complete with music, creating the perfect atmosphere for a relaxed and memorable social gathering.",
       details: ["Curated Campfire Setup", "Music Experience", "Evening Social Ambience", "Memorable Gatherings"],
-      hours: "Evenings",
+      hours: "8:00 AM - 9:00 PM",
       charge: "Charges Apply",
       image: poolImage,
     },
@@ -92,7 +92,7 @@ export default function Facilities() {
       description:
         "For special occasions or intimate celebrations, indulge in a customized candlelight dinner that promises an unforgettable and private dining experience.",
       details: ["Customized Setup", "Private Dining Experience", "Ideal for Celebrations", "Romantic Ambience"],
-      hours: "On Request",
+      hours: "8:00 AM - 9:00 PM",
       charge: "Charges Apply",
       image: poolImage,
     },
@@ -102,7 +102,7 @@ export default function Facilities() {
       description:
         "At The Sanihara, we offer a thoughtfully curated selection of recreational and wellness facilities, ensuring a well-balanced stay that combines relaxation, fitness, and leisure for guests of all ages.",
       details: ["Curated Leisure Facilities", "Wellness Experiences", "Family-Friendly Spaces", "Balanced Stay"],
-      hours: "All Day",
+      hours: "8:00 AM - 9:00 PM",
       charge: "Included for Guests",
       image: poolImage,
     },
@@ -112,7 +112,7 @@ export default function Facilities() {
       description:
         "Indulge in holistic rejuvenation with traditional Ayurvedic therapies designed to restore balance and enhance well-being. Our wellness center provides a variety of treatments performed by trained professionals in a serene and therapeutic environment.",
       details: ["Traditional Ayurvedic Therapies", "Professional Therapists", "Holistic Rejuvenation", "Serene Ambience"],
-      hours: "9:00 AM - 9:00 PM",
+      hours: "8:00 AM - 9:00 PM",
       charge: "Charges Apply",
       image: poolImage,
     },

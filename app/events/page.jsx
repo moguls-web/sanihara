@@ -3,18 +3,16 @@
 import { Users, Monitor, Sun, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import heroImage from "@/assets/hero-resort.jpg";
 
 export default function Events() {
   const venues = [
     {
       name: "Conference Hall",
-      area: "5,000 sq ft",
+      area: "1,200 sq. ft.",
       description: "The Conference Hall, with a seating capacity of up to 150 guests, is ideal for corporate meetings, seminars, training sessions, and mid-scale events. Its adaptable layout provides a professional environment, prioritizing both comfort and productivity.",
       capacities: {
-        theatre: 500,
-        banquet: 350,
-        cocktail: 600,
+        theatre: 150,
+        banquet: 75,
       },
       features: [
         "Capacity: Up to 150 guests",
@@ -23,19 +21,18 @@ export default function Events() {
         "Dedicated service support", 
       ],
       ideal: "Weddings, Conferences, Large Events",
-      image: heroImage,
+      image: "/conference-hall-updated.jpg",
       icon: Building,
     }, 
 
 
     {
       name: "Mini Conference Hall",
-      area: "5,000 sq ft",
+      area: "600 sq. ft.",
       description: "Designed for smaller gatherings, the Mini Conference Hall accommodates up to 75 guests. It’s the perfect choice for intimate meetings, workshops, and private business discussions, offering a focused and efficient space for your corporate needs.",
       capacities: {
-        theatre: 500,
-        banquet: 350,
-        cocktail: 600,
+        theatre: 75,
+        banquet: 35,
       },
       features: [
         "Capacity: Up to 75 guests",
@@ -44,27 +41,26 @@ export default function Events() {
         "Personalized service support", 
       ],
       ideal: "Weddings, Conferences, Large Events",
-      image: heroImage,
+      image: "/mini-confrence-hall-updated.jpg",
       icon: Building,
     }, 
 
     {
       name: "Open Wedding & Event Space",
-      area: "5,000 sq ft",
-      description: "Our expansive open-air venue offers the perfect setting for grand events, with a capacity to host up to 1,000 guests. Whether it’s a wedding, reception, or large social gathering, this space provides flexibility for customized décor, stage setups, and catering arrangements.",
+      area: "30,000 sq. ft.",
+      description: "Our expansive open-air venue offers the perfect setting for grand events, with a capacity to host up to 2,000 guests. Whether it’s a wedding, reception, or large social gathering, this space provides flexibility for customized décor, stage setups, and catering arrangements.",
       capacities: {
-        theatre: 500,
-        banquet: 350,
-        cocktail: 600,
+        theatre: 2000,
+        banquet: "upto 1,000",
       },
       features: [
-        "Capacity: Up to 1,000 guests",
+        "Capacity: Theatre 2,000 / Banquet up to 1,000",
         "Perfect for weddings, receptions, and large events",
         "Spacious and flexible layout",
         "Ideal for customized themes and setups", 
       ],
       ideal: "Weddings, Conferences, Large Events",
-      image: heroImage,
+      image: "/open-weddding_updated.jpg",
       icon: Building,
     }, 
     

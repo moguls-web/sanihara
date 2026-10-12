@@ -9,6 +9,31 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
+const IndiaFlag = () => (
+  <svg
+    viewBox="0 0 24 16"
+    className="h-4 w-6 rounded-[2px] shrink-0 overflow-hidden"
+    aria-hidden
+  >
+    <rect width="24" height="5.33" y="0" fill="#FF9933" />
+    <rect width="24" height="5.34" y="5.33" fill="#FFFFFF" />
+    <rect width="24" height="5.33" y="10.67" fill="#138808" />
+    <circle cx="12" cy="8" r="2.2" fill="none" stroke="#000080" strokeWidth="0.7" />
+    <circle cx="12" cy="8" r="0.45" fill="#000080" />
+  </svg>
+);
+
+const IndonesiaFlag = () => (
+  <svg
+    viewBox="0 0 24 16"
+    className="h-4 w-6 rounded-[2px] shrink-0 overflow-hidden"
+    aria-hidden
+  >
+    <rect width="24" height="8" y="0" fill="#CE1126" />
+    <rect width="24" height="8" y="8" fill="#FFFFFF" />
+  </svg>
+);
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -154,17 +179,24 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Phone Contact</h3>
-                      <a href="tel:+918547296999" className="text-muted-foreground hover:text-brand block">
+                      <a href="tel:+918547296999" className="text-muted-foreground hover:text-brand flex items-center gap-2">
+                        <IndiaFlag />
                         +91 8547296999
                       </a>
-                      <a href="tel:+919446105699" className="text-muted-foreground hover:text-brand block">
+                      <a href="tel:+919446105699" className="text-muted-foreground hover:text-brand flex items-center gap-2">
+                        <IndiaFlag />
                         +91 9446105699
                       </a>
-                      <a href="tel:+919562941483" className="text-muted-foreground hover:text-brand block mt-1">
+                      {/* <a href="tel:+919562941483" className="text-muted-foreground hover:text-brand block mt-1">
                         +91 9562941483
-                      </a>
-                      <a href="tel:+919446108699" className="text-muted-foreground hover:text-brand">
+                      </a> */}
+                      <a href="tel:+919446108699" className="text-muted-foreground hover:text-brand flex items-center gap-2">
+                        <IndiaFlag />
                         +91 9446108699
+                      </a>
+                      <a href="tel:+6281212935550" className="text-muted-foreground hover:text-brand flex items-center gap-2">
+                        <IndonesiaFlag />
+                        +62 812-1293-5550
                       </a>
                     </div>
                   </div>
