@@ -60,7 +60,7 @@ export default function Events() {
         "Ideal for customized themes and setups", 
       ],
       ideal: "Weddings, Conferences, Large Events",
-      image: "/open-weddding_updated.jpg",
+      image: "/open-weddding_updated-1.webp",
       icon: Building,
     }, 
     
